@@ -12,6 +12,7 @@ import {DropdownModule} from 'primeng/dropdown';
 import {KeyFilterModule} from 'primeng/keyfilter';
 import {InputMaskModule} from 'primeng/inputmask';
 import {TabViewModule} from 'primeng/tabview';
+import {RadioButtonModule} from 'primeng/radiobutton';
 
 
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
@@ -47,6 +48,7 @@ import { AlunoCadastroComponent } from './aluno-cadastro/aluno-cadastro.componen
     KeyFilterModule,
     InputMaskModule,
     TabViewModule,
+    RadioButtonModule,
     AngularFontAwesomeModule
   ],
   providers: [],
