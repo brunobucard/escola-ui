@@ -13,15 +13,27 @@
 
       <div class="ui-g-12 ui-fluid">
         <label>Nome</label>
-        <input type="text" pInputText placeholder="Nome">
+        <input type="text" pInputText  name="nome"
+        ngModel #nome="ngModel" required>
+
+        <app-message [control]="nome" error="required"
+        text="Informe o nome"></app-message>
+
       </div>
+
       <div class="ui-g-12 ui-md-3 ui-fluid">
         <label>Sexo</label>
-        <input type="text" pInputText placeholder="Sexo">
+        <input type="text" pInputText placeholder="Sexo" name="sexo" ngModel #sexo="ngModel" required>
+        <app-message [control]="sexo" error="required"
+        text="Informe o sexo"></app-message>
       </div>
+
       <div class="ui-g-12 ui-md-3 ui-fluid">
         <label>Data de Nascimento</label>
-        <p-calendar dateFormat="dd/mm/yy" [monthNavigator]="true" [yearNavigator]="true" yearRange="1900:2030"></p-calendar>
+        <p-calendar dateFormat="dd/mm/yy" [monthNavigator]="true" [yearNavigator]="true" yearRange="1900:2030"
+          name="dataNascimento" ngModel #dataNascimento="ngModel" required></p-calendar>
+        <app-message [control]="dataNascimento" error="required" text="Informe a data de nascimento"></app-message>
+
       </div>
       <div class="ui-g-12 ui-md-4 ui-fluid">
         <label>Naturalidade</label>
