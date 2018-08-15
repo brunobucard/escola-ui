@@ -453,6 +453,11 @@
         <p-radioButton name="group1" value="Option 2" label="Homeopática" [(ngModel)]="val1" inputId="opt2"></p-radioButton>
       </div>
 
+      <div class="ui-g-12 ui-fluid">
+        <hr>
+        <label>O educando apresenta:</label>
+      </div>
+
       <div class="ui-g-12 ui-fluid" style="margin-bottom:10px">
         <label>Doença congênita</label>
         <p-radioButton name="group2" value="Option 1" label="Não" [(ngModel)]="val2" inputId="opt1"></p-radioButton>
@@ -481,7 +486,7 @@
           </div>
         </div>
 
-        <div class="ui-g-12 ui-fluid">
+        <div class="ui-g-12 ui-fluid" style="margin-bottom:10px">
             <label>Hemofilia</label>
             <p-radioButton name="group6" value="Option 1" label="Não" [(ngModel)]="val6" inputId="opt1"></p-radioButton>
             <p-radioButton name="group6" value="Option 2" label="Sim" [(ngModel)]="val6" inputId="opt2"></p-radioButton>
@@ -504,9 +509,113 @@
             <p-radioButton name="group9" value="Option 2" label="Sim" [(ngModel)]="val9" inputId="opt2"></p-radioButton>
         </div>
 
+        <div class="ui-g-12 ui-fluid" style="margin-bottom:10px">
+            <label>Alergia a algum tipo de medicamento tópico, oral ou injetável?</label>
+            <p-radioButton name="group10" value="Option 1" label="Não" [(ngModel)]="val10" inputId="opt1"></p-radioButton>
+            <p-radioButton name="group10" value="Option 2" label="Sim" [(ngModel)]="val10" inputId="opt2"></p-radioButton>
+            <div class="ui-md-6 ui-fluid">
+                <label>Qual?</label>
+                <input type="text" pInputText>
+            </div>
+        </div>
 
+        <div class="ui-g-12 ui-fluid" style="margin-bottom:10px">
+            <label>Esta fazendo algum tipo de tratamento médico?</label>
+            <p-radioButton name="group11" value="Option 1" label="Não" [(ngModel)]="val11" inputId="opt1"></p-radioButton>
+            <p-radioButton name="group11" value="Option 2" label="Sim" [(ngModel)]="val11" inputId="opt2"></p-radioButton>
+            <div class="ui-md-6 ui-fluid">
+                <label>Qual?</label>
+                <input type="text" pInputText>
+            </div>
+        </div>
 
+        <div class="ui-g-12 ui-fluid" style="margin-bottom:10px">
+            <label>Faz uso de medicação específica?</label>
+            <p-radioButton name="group12" value="Option 1" label="Não" [(ngModel)]="val12" inputId="opt1"></p-radioButton>
+            <p-radioButton name="group12" value="Option 2" label="Sim" [(ngModel)]="val12" inputId="opt2"></p-radioButton>
+            <div class="ui-md-6 ui-fluid">
+                <label>Qual?</label>
+                <input type="text" pInputText>
+            </div>
+        </div>
 
+        <div class="ui-g-12 ui-md-6 ui-fluid">
+            <label>Nome do médico</label>
+            <input type="text" pInputText>
+        </div>
+
+        <div class="ui-g-12 ui-md-6 ui-fluid">
+            <label>Telefone</label>
+            <input type="text" pInputText>
+        </div>
+
+        <div class="ui-g-12 ui-fluid">
+            <hr>
+            <label>É portador de alguma necessidade especial?</label>
+        </div>
+
+        <div class="ui-g-12 ui-fluid">
+            <label>Motora</label>
+            <p-radioButton name="group13" value="Option 1" label="Não" [(ngModel)]="val13" inputId="opt1"></p-radioButton>
+            <p-radioButton name="group13" value="Option 2" label="Sim" [(ngModel)]="val13" inputId="opt2"></p-radioButton>
+        </div>
+
+        <div class="ui-g-12 ui-fluid">
+            <label>Visual</label>
+            <p-radioButton name="group14" value="Option 1" label="Não" [(ngModel)]="val14" inputId="opt1"></p-radioButton>
+            <p-radioButton name="group14" value="Option 2" label="Sim" [(ngModel)]="val14" inputId="opt2"></p-radioButton>
+        </div>
+
+        <div class="ui-g-12 ui-fluid">
+            <label>Auditiva</label>
+            <p-radioButton name="group15" value="Option 1" label="Não" [(ngModel)]="val15" inputId="opt1"></p-radioButton>
+            <p-radioButton name="group15" value="Option 2" label="Sim" [(ngModel)]="val15" inputId="opt2"></p-radioButton>
+        </div>
+
+        <div class="ui-g-12 ui-fluid">
+            <label>Autismo</label>
+            <p-radioButton name="group16" value="Option 1" label="Não" [(ngModel)]="val16" inputId="opt1"></p-radioButton>
+            <p-radioButton name="group16" value="Option 2" label="Sim" [(ngModel)]="val16" inputId="opt2"></p-radioButton>
+        </div>
+
+        <div class="ui-g-12 ui-fluid">
+          <label>Outra</label>
+          <input type="text" pInputText>
+        </div>
+
+        <div class="ui-g-12 ui-fluid" style="margin-top: 10px">
+            <hr>
+        </div>
+
+        <div class="ui-g-12 ui-fluid" style="margin-bottom:10px">
+            <label>Faz algum acompanhamento com especialista</label>
+            <p-radioButton name="group17" value="Option 1" label="Não" [(ngModel)]="val17" inputId="opt1"></p-radioButton>
+            <p-radioButton name="group17" value="Option 2" label="Sim" [(ngModel)]="val17" inputId="opt2"></p-radioButton>
+            <div class="ui-md-6 ui-fluid">
+                <label>Qual?</label>
+                <input type="text" pInputText>
+            </div>
+        </div>
+
+        <div class="ui-g-12 ui-fluid" style="margin-top: 10px">
+            <hr>
+        </div>
+
+        <div class="ui-g-12 ui-fluid" style="margin-bottom:10px">
+            <label>Quais doenças contagiosas da infância já contraidas?</label>
+            <div class="ui-g-12"><p-checkbox name="group1" value="CAXUMBA" label="caxumba"  inputId="caxumba"></p-checkbox></div>
+            <div class="ui-g-12"><p-checkbox name="group1" value="SARAMPO" label=" sarampo"  inputId="sarampo"></p-checkbox></div>
+            <div class="ui-g-12"><p-checkbox name="group1" value="RUBEOLA" label="rubéola"  inputId="rubeola"></p-checkbox></div>
+            <div class="ui-g-12"><p-checkbox name="group1" value="CATAPORA" label="catapora"  inputId="catapora"></p-checkbox></div>
+            <div class="ui-g-12"><p-checkbox name="group1" value="ESCARLATINA" label="escarlatina"  inputId="escarlatina"></p-checkbox></div>
+            <div class="ui-g-12"><p-checkbox name="group1" value="COQUELUCHE" label="coqueluche"  inputId="coqueluche"></p-checkbox></div>
+            <div class="ui-g-12"><p-checkbox name="group1" value="OUTRAS" label="outras"  inputId="outras"></p-checkbox></div>
+
+            <div class="ui-md-6 ui-fluid">
+                <label>Qual?</label>
+                <input type="text" pInputText>
+            </div>
+        </div>
 
 
     </p-tabPanel>
