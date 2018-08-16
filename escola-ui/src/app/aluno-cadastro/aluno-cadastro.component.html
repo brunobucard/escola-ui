@@ -546,7 +546,7 @@
 
         <div class="ui-g-12 ui-md-6 ui-fluid">
             <label>Telefone</label>
-            <input type="text" pInputText>
+            <p-inputMask mask="(99)9999-9999"></p-inputMask>
         </div>
 
         <div class="ui-g-12 ui-fluid">
@@ -617,14 +617,130 @@
             </div>
         </div>
 
+        <div class="ui-g-12 ui-fluid" style="margin-top: 10px">
+          <hr>
+        </div>
+
+        <div class="ui-g-12 ui-fluid">
+          <label>Em caso de emegência, não localizados os pais ou responsáveis, que deverá ser avisado?</label>
+
+        </div>
+        <div class="ui-g-12 ui-md-6 ui-fluid">
+          <label>Nome</label>
+          <input type="text" pInputText>
+        </div>
+        <div class="ui-g-12 ui-md-2 ui-fluid">
+          <label>Parentesco</label>
+          <input type="text" pInputText>
+        </div>
+        <div class="ui-g-12 ui-md-2 ui-fluid">
+          <label>Telefone</label>
+          <p-inputMask mask="(99)9999-9999"></p-inputMask>
+        </div>
+        <div class="ui-g-12 ui-md-2 ui-fluid">
+          <label>Celular</label>
+          <p-inputMask mask="(99)99999-9999"></p-inputMask>
+        </div>
+
+        <div class="ui-g-12 ui-md-6 ui-fluid">
+          <label>Nome</label>
+          <input type="text" pInputText>
+        </div>
+        <div class="ui-g-12 ui-md-2 ui-fluid">
+          <label>Parentesco</label>
+          <input type="text" pInputText>
+        </div>
+        <div class="ui-g-12 ui-md-2 ui-fluid">
+          <label>Telefone</label>
+          <p-inputMask mask="(99)9999-9999"></p-inputMask>
+        </div>
+        <div class="ui-g-12 ui-md-2 ui-fluid">
+          <label>Celular</label>
+          <p-inputMask mask="(99)99999-9999"></p-inputMask>
+        </div>
+
+        <div class="ui-g-12 ui-fluid" style="margin-top: 10px">
+          <hr>
+        </div>
+
+        <div class="ui-g-12 ui-fluid">
+          <label>O educando possui algum plano de saúde?</label>
+          <p-radioButton name="group18" value="Option 1" label="Não" [(ngModel)]="val18" inputId="opt1"></p-radioButton>
+          <p-radioButton name="group18" value="Option 2" label="Sim" [(ngModel)]="val18" inputId="opt2"></p-radioButton>
+          <div class="ui-md-6 ui-fluid">
+              <label>Qual?</label>
+              <input type="text" pInputText>
+          </div>
+        </div>
+
+        <div class="ui-g-12 ui-fluid" style="margin-top: 10px">
+          <hr>
+        </div>
+        <div class="ui-g-12 ui-md-6 ui-fluid">
+          <label>Em caso de necessidade, o educando deverá ser removido  para o hospital:</label>
+          <input type="text" pInputText>
+        </div>
+        <div class="ui-g-12 ui-md-4 ui-fluid">
+          <label>Endereço</label>
+          <input type="text" pInputText>
+        </div>
+        <div class="ui-g-12 ui-md-2 ui-fluid">
+          <label>Telefone</label>
+          <p-inputMask mask="(99)9999-9999"></p-inputMask>
+        </div>
+
+
+
+
 
     </p-tabPanel>
 
     <p-tabPanel header="Considerações da família">
+
+      <div class="ui-g-12 ui-fluid">
+          <label>Quem está autorizado a retirar o educando da escola?</label>
+
+        </div>
+        <div class="ui-g-12 ui-md-6 ui-fluid">
+          <label>Nome</label>
+          <input type="text" pInputText>
+        </div>
+        <div class="ui-g-12 ui-md-2 ui-fluid">
+          <label>RG</label>
+          <input type="text" pInputText>
+        </div>
+        <div class="ui-g-12 ui-md-4 ui-fluid">
+            <label>Parentesco</label>
+            <input type="text" pInputText>
+        </div>
+        <div class="ui-g-12 ui-md-6 ui-fluid">
+            <label>Nome</label>
+            <input type="text" pInputText>
+          </div>
+          <div class="ui-g-12 ui-md-2 ui-fluid">
+            <label>RG</label>
+            <input type="text" pInputText>
+          </div>
+          <div class="ui-g-12 ui-md-4 ui-fluid">
+              <label>Parentesco</label>
+              <input type="text" pInputText>
+          </div>
+
+          <div class="ui-g-12 ui-fluid" style="margin-bottom:10px">
+              <label>O educando vem para escola de que forma?</label>
+              <div class="ui-g-12"><p-checkbox name="group2" value="APE" label="A pé e sozinho"  inputId="ape"></p-checkbox></div>
+              <div class="ui-g-12"><p-checkbox name="group2" value="ONIBUS" label="De ônibus e sozinho"  inputId="onibus"></p-checkbox></div>
+              <div class="ui-g-12"><p-checkbox name="group2" value="ACOMPANHADO" label="Alguém vem traze-lo"  inputId="acompanhado"></p-checkbox></div>
+              <div class="ui-g-12"><p-checkbox name="group2" value="TRANSPORTE" label="Transpote escolar"  inputId="transporte"></p-checkbox></div>
+          </div>
+
+
       <div class="ui-g-12 ui-fluid">
           <label>Observações que a família deseja fazer</label>
           <textarea [rows]="5" [cols]="30" pInputTextarea autoResize="autoResize"></textarea>
       </div>
+
+
     </p-tabPanel>
 
       </p-tabView>
