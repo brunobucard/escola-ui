@@ -17,6 +17,7 @@ import {CheckboxModule} from 'primeng/checkbox';
 
 
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
+
 import { FormsModule } from '@angular/forms';
 
 
@@ -27,20 +28,25 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { AlunoCadastroComponent } from './aluno-cadastro/aluno-cadastro.component';
 import { MessageComponent } from './message/message.component';
-import { AlunoPesquisaComponent } from './aluno-pesquisa/aluno-pesquisa.component';
+import { AlunoModule} from './aluno/aluno.module';
+
+
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     AlunoCadastroComponent,
-    MessageComponent,
-    AlunoPesquisaComponent
+    MessageComponent
+
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     FormsModule,
+
+
+    AlunoModule,
 
     InputTextModule,
     ButtonModule,

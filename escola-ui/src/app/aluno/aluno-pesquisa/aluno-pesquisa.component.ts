@@ -5,11 +5,12 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './aluno-pesquisa.component.html',
   styleUrls: ['./aluno-pesquisa.component.css']
 })
-export class AlunoPesquisaComponent implements OnInit {
+export class AlunoPesquisaComponent {
 
-  constructor() { }
+  alunos = [
+    { nome: 'Bruno', sexo: 'Masculino'},
+    { nome: 'Ana Elisa', sexo: 'Feminino'}
 
-  ngOnInit() {
-  }
+  ];
 
 }
