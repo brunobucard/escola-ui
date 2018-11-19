@@ -25,17 +25,18 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {InputTextModule} from 'primeng/inputtext';
 
 import { AppComponent } from './app.component';
-import { NavbarComponent } from './navbar/navbar.component';
 import { AlunoCadastroComponent } from './aluno-cadastro/aluno-cadastro.component';
 import { MessageComponent } from './message/message.component';
 import { AlunoModule} from './aluno/aluno.module';
+import { SegurancaModule } from './seguranca/seguranca.module';
+import { CoreModule } from './core/core.module';
+import { AppRoutingModule } from './app-routing.module';
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavbarComponent,
     AlunoCadastroComponent,
     MessageComponent
 
@@ -47,6 +48,9 @@ import { AlunoModule} from './aluno/aluno.module';
 
 
     AlunoModule,
+    SegurancaModule,
+    CoreModule,
+    AppRoutingModule,
 
     InputTextModule,
     ButtonModule,
