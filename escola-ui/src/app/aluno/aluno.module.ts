@@ -1,3 +1,5 @@
+import { AlunoCadastroComponent } from './aluno-cadastro/aluno-cadastro.component';
+import { AlunosRoutingModule } from './alunos-routing.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
@@ -18,6 +20,7 @@ import { TabViewModule } from 'primeng/tabview';
 import { RadioButtonModule } from 'primeng/radiobutton';
 import { CheckboxModule } from 'primeng/checkbox';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   imports: [
@@ -37,15 +40,19 @@ import { AngularFontAwesomeModule } from 'angular-font-awesome';
     TabViewModule,
     RadioButtonModule,
     CheckboxModule,
-    AngularFontAwesomeModule
+    AngularFontAwesomeModule,
+
+    SharedModule,
+    AlunosRoutingModule
   ],
   declarations: [
     AlunoPesquisaComponent,
-    AlunoGridComponent
+    AlunoGridComponent,
+    AlunoCadastroComponent
   ],
 
   exports: [
-    AlunoPesquisaComponent
+
   ]
 })
 export class AlunoModule { }

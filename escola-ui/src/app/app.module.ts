@@ -25,8 +25,6 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {InputTextModule} from 'primeng/inputtext';
 
 import { AppComponent } from './app.component';
-import { AlunoCadastroComponent } from './aluno-cadastro/aluno-cadastro.component';
-import { MessageComponent } from './message/message.component';
 import { AlunoModule} from './aluno/aluno.module';
 import { SegurancaModule } from './seguranca/seguranca.module';
 import { CoreModule } from './core/core.module';
@@ -37,14 +35,12 @@ import { AppRoutingModule } from './app-routing.module';
 @NgModule({
   declarations: [
     AppComponent,
-    AlunoCadastroComponent,
-    MessageComponent
+
 
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    FormsModule,
 
 
     AlunoModule,

@@ -23,6 +23,7 @@
               "src/assets"
             ],
             "styles": [
+              {"input": "node_modules/ng2-toasty/style-bootstrap.css"},
               {"input": "node_modules/font-awesome/css/font-awesome.min.css"},
               {"input":"node_modules/primeicons/primeicons.css"},
               {"input":"node_modules/primeng/resources/themes/omega/theme.css"},
@@ -78,6 +79,7 @@
             "tsConfig": "src/tsconfig.spec.json",
             "karmaConfig": "src/karma.conf.js",
             "styles": [
+              {"input": "node_modules/ng2-toasty/style-bootstrap.css"},
               {"input": "node_modules/font-awesome/css/font-awesome.min.css"},
               {"input":"node_modules/primeicons/primeicons.css"},
               {"input":"node_modules/primeng/resources/themes/omega/theme.css"},
