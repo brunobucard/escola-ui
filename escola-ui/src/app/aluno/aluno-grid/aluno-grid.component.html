@@ -1,22 +1,37 @@
 <p-table [value]="alunos" [paginator]="true" [rows]="5"
-[responsive]="true">
+  [responsive]="true" [rows]="filtro.itensPorPagina"
+  [lazy]="true" [totalRecords]="totalRegistros"
+  (onLazyLoad)="aoMudarPagina($event)" #tabela>
   <ng-template pTemplate="header">
       <tr>
           <th>Nome</th>
           <th>Sexo</th>
           <th>Ações</th>
-
+          <th class="col-acoes-header"></th>
       </tr>
   </ng-template>
+
   <ng-template pTemplate="body" let-aluno>
       <tr>
           <td>{{aluno.nome}}</td>
           <td>{{ aluno.sexo }}</td>
-          <td>
-            <a pButton icon="fa fa-pencil" pTooltip="Editar" tooltipPosition="top"></a>
-            <button pButton icon="fa fa-trash" pTooltip="Excluir" tooltipPosition="top"></button>
+          <td class="col-acoes">
+            <a pButton icon="fa fa-pencil" pTooltip="Editar" tooltipPosition="top"
+              [routerLink]="['/alunos', aluno.codigo]"></a>
+
+            <button pButton icon="fa fa-trash" pTooltip="Excluir" tooltipPosition="top"
+              (click)="confirmarExclusao(aluno)"></button>
           </td>
       </tr>
   </ng-template>
+
+  <ng-template pTemplate="emptymessage">
+      <tr>
+        <td colspan="5">
+          Nenhum registro encontrado
+        </td>
+      </tr>
+    </ng-template>
+
 </p-table>
 
