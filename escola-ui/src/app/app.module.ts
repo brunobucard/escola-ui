@@ -42,26 +42,9 @@ import { AppRoutingModule } from './app-routing.module';
     BrowserModule,
     BrowserAnimationsModule,
 
-
-    AlunoModule,
-    SegurancaModule,
     CoreModule,
+    SegurancaModule,
     AppRoutingModule,
-
-    InputTextModule,
-    ButtonModule,
-    TableModule,
-    TooltipModule,
-    InputTextareaModule,
-    CalendarModule,
-    SelectButtonModule,
-    DropdownModule,
-    KeyFilterModule,
-    InputMaskModule,
-    TabViewModule,
-    RadioButtonModule,
-    CheckboxModule,
-    AngularFontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
