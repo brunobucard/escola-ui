@@ -1,11 +1,8 @@
-import { AlunoCadastroComponent } from './aluno-cadastro/aluno-cadastro.component';
-import { AlunosRoutingModule } from './alunos-routing.module';
-import { NgModule } from '@angular/core';
+import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
-
-import { AlunoPesquisaComponent } from './aluno-pesquisa/aluno-pesquisa.component';
-import { AlunoGridComponent } from './aluno-grid/aluno-grid.component';
+import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+
 import { InputTextModule } from 'primeng/inputtext';
 import { ButtonModule } from 'primeng/button';
 import { TableModule } from 'primeng/table';
@@ -20,7 +17,12 @@ import { TabViewModule } from 'primeng/tabview';
 import { RadioButtonModule } from 'primeng/radiobutton';
 import { CheckboxModule } from 'primeng/checkbox';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
-import { SharedModule } from '../shared/shared.module';
+
+import { SharedModule } from './../shared/shared.module';
+import { AlunoCadastroComponent } from './aluno-cadastro/aluno-cadastro.component';
+import { AlunosRoutingModule } from './alunos-routing.module';
+import { AlunoPesquisaComponent } from './aluno-pesquisa/aluno-pesquisa.component';
+import { AlunoGridComponent } from './aluno-grid/aluno-grid.component';
 
 @NgModule({
   imports: [
@@ -51,8 +53,6 @@ import { SharedModule } from '../shared/shared.module';
     AlunoCadastroComponent
   ],
 
-  exports: [
-
-  ]
+  exports: [ ]
 })
 export class AlunoModule { }

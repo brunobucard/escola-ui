@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 
 import { AuthGuard } from './../seguranca/auth.guard';
 
+
 const routes: Routes = [
   {
     path: '',
@@ -17,6 +18,7 @@ const routes: Routes = [
   imports: [
     RouterModule.forChild(routes)
   ],
+
   exports: [RouterModule]
 })
 export class AlunosRoutingModule { }
