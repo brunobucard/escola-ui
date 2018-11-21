@@ -13,11 +13,13 @@
     <li class="navbar-menuitem" routerLinkActive="ativo"
       *ngIf="auth.temPermissao('ROLE_PESQUISAR_ALUNO')"><a routerLink="/alunos">Alunos</a></li>
     <li class="navbar-menuitem" routerLinkActive="ativo"
-      *ngIf="auth.temPermissao('ROLE_PESQUISAR_LANCAMENTO')"><a routerLink="/lancamentos">Lançamentos</a></li>
+      *ngIf="auth.temPermissao('ROLE_PESQUISAR_RESPONSAVEL')"><a routerLink="/responsaveis">Responsáveis</a></li>
     <li class="navbar-menuitem" routerLinkActive="ativo"
-      *ngIf="auth.temPermissao('ROLE_PESQUISAR_PESSOA')"><a routerLink="/pessoas">Pessoas</a></li>
+      *ngIf="auth.temPermissao('ROLE_PESQUISAR_FUNCIONARIO')"><a routerLink="/funcionarios">Funcionários</a></li>
     <li class="navbar-menuitem" routerLinkActive="ativo"
-      *ngIf="auth.temPermissao('ROLE_PESQUISAR_LANCAMENTO')"><a routerLink="/relatorios/lancamentos">Relatório</a></li>
+      *ngIf="auth.temPermissao('ROLE_PESQUISAR_USUARIO')"><a routerLink="/usuarios">Usuários</a></li>
+    <li class="navbar-menuitem" routerLinkActive="ativo"
+    *ngIf="auth.temPermissao('ROLE_PESQUISAR_LANCAMENTO')"><a routerLink="/relatorios/lancamentos">Relatório</a></li>
     <li class="navbar-menuitem"><a href="javascript:;" (click)="logout()">Logout</a></li>
   </ul>
 

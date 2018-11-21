@@ -1,3 +1,9 @@
+export class Aluno {
+  codigo: number;
+  nome: string;
+  sexo: string;
+}
+
 export class Estado {
   codigo: number;
   nome: string;
