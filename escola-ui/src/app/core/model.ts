@@ -2,26 +2,63 @@ export class Aluno {
   codigo: number;
   nome: string;
   sexo: string;
-}
-
-export class Estado {
-  codigo: number;
-  nome: string;
-}
-
-export class Cidade {
-  codigo: number;
-  nome: string;
-  estado = new Estado();
+  ativo: boolean;
+  dataNascimento: Date;
+  naturalidade: string;
+  naturalidadeEstado: string;
+  nacionalidade: string;
+  cpf: string;
+  identidade: string;
+  identidadeEmissao: Date;
+  identidadeEmissor: string;
+  identidadeEmissorEstado: string;
+  certidaoNascimento: string;
+  certidaoData: Date;
+  certidaoLivro: string;
+  certidaoFolhas: string;
+  certidaoCartorio: string;
+  certidaoEstado: string;
+  telefone: string;
+  celular: string;
+  paisSeparados: boolean;
+  resideCom: string;
+  escolaOrigem: string;
+  escolaOrigemCidade: string;
+  escolaOrigemEstado: string;
+  religiao: string;
+  email: string;
+  senha: string;
+  nomePai: string;
+  nomeMae: string;
+  tipoSanguineo: string;
+  endereco = new Endereco();
+  responsavel = new Responsavel();
 }
 
 export class Endereco {
   logradouro: string;
   numero: string;
   complemento: string;
+  referencia: string;
   bairro: string;
   cep: string;
-  cidade = new Cidade();
+  cidade: string;
+  estado: string;
+}
+
+export class Saude {
+
+}
+
+export class Responsavel {
+  codigo: number;
+  nome: string;
+  email: string;
+  senha: string;
+  relacionamento: string;
+  telefone: string;
+  celular: string;
+  endereco = new Endereco();
 }
 
 export class Contato {

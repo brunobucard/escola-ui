@@ -21,37 +21,42 @@
 
       </div>
 
-      <div class="ui-g-12 ui-md-3 ui-fluid">
+      <div class="ui-g-12 ui-md-1 ui-fluid">
         <label>Sexo</label>
         <input type="text" pInputText placeholder="Sexo" name="sexo" ngModel #sexo="ngModel" required>
         <app-message [control]="sexo" error="required"
         text="Informe o sexo"></app-message>
       </div>
 
-      <div class="ui-g-12 ui-md-3 ui-fluid">
+      <div class="ui-g-12 ui-md-2 ui-fluid">
         <label>Data de Nascimento</label>
         <p-calendar dateFormat="dd/mm/yy" [monthNavigator]="true" [yearNavigator]="true" yearRange="1900:2030"
           name="dataNascimento" ngModel #dataNascimento="ngModel" required></p-calendar>
         <app-message [control]="dataNascimento" error="required" text="Informe a data de nascimento"></app-message>
 
       </div>
-      <div class="ui-g-12 ui-md-4 ui-fluid">
+      <div class="ui-g-12 ui-md-2 ui-fluid">
         <label>Naturalidade</label>
         <input type="text" pInputText>
       </div>
-      <div class="ui-g-12 ui-md-2 ui-fluid">
+      <div class="ui-g-12 ui-md-3 ui-fluid">
         <label>Estado</label>
         <input type="text" pInputText>
       </div>
-      <div class="ui-g-12 ui-md-6 ui-fluid">
+      <div class="ui-g-12 ui-md-4 ui-fluid">
       <label>Nacionalidade</label>
         <input type="text" pInputText>
       </div>
-      <div class="ui-g-12 ui-md-6 ui-fluid">
+
+      <div class="ui-g-12 ui-fluid">
+        <hr>
+      </div>
+
+      <div class="ui-g-12 ui-md-2 ui-fluid">
         <label>CPF</label>
         <p-inputMask mask="999.999.999-99"></p-inputMask>
       </div>
-      <div class="ui-g-12 ui-md-6 ui-fluid">
+      <div class="ui-g-12 ui-md-2 ui-fluid">
         <label>Carteira de Identidade</label>
         <input type="text" pInputText>
       </div>
@@ -63,8 +68,8 @@
         <label>Orgão Emissor</label>
         <input type="text" pInputText>
       </div>
-      <div class="ui-g-12 ui-md-1 ui-fluid">
-        <label>Estado</label>
+      <div class="ui-g-12 ui-md-3 ui-fluid">
+        <label>Estado emissor</label>
         <input type="text" pInputText>
       </div>
       <div class="ui-g-12 ui-md-5 ui-fluid">
@@ -88,29 +93,44 @@
         <input type="text" pInputText>
       </div>
       <div class="ui-g-12 ui-md-3 ui-fluid">
-        <label>Estado</label>
+        <label>Estado emissor</label>
         <input type="text" pInputText>
       </div>
-      <div class="ui-g-12 ui-md-9 ui-fluid">
+
+      <div class="ui-g-12 ui-fluid">
+        <hr>
+      </div>
+
+      <div class="ui-g-12 ui-md-2 ui-fluid">
+        <label>CEP</label>
+        <p-inputMask mask="99999-999" id="cep" name="cep" [(ngModel)]="cep.cep" (change)="buscar()"></p-inputMask>
+      </div>
+
+
+
+      <div class="ui-g-12 ui-md-6 ui-fluid">
         <label>Endereço Residêncial</label>
-        <input type="text" pInputText>
+        <input type="text" pInputText id="endereco" name="endereco" [(ngModel)]="cep.logradouro">
       </div>
-      <div class="ui-g-12 ui-md-3 ui-fluid">
+      <div class="ui-g-12 ui-md-4 ui-fluid">
         <label>Complemento</label>
-        <input type="text" pInputText>
+        <input type="text" pInputText id="complemento" name="complemento" [(ngModel)]="cep.complemento">
       </div>
       <div class="ui-g-12 ui-md-5 ui-fluid">
         <label>Bairro</label>
-        <input type="text" pInputText>
+        <input type="text" pInputText id="bairro" name="bairro" [(ngModel)]="cep.bairro">
       </div>
       <div class="ui-g-12 ui-md-5 ui-fluid">
         <label>Cidade</label>
-        <input type="text" pInputText>
+        <input type="text" pInputText id="cidade" name="cidade" [(ngModel)]="cep.cidade">
       </div>
+
       <div class="ui-g-12 ui-md-2 ui-fluid">
-        <label>CEP</label>
-        <p-inputMask mask="99999-999"></p-inputMask>
+        <label>Estado</label>
+        <input type="text" pInputText id="estado" name="estado" [(ngModel)]="cep.estado">
       </div>
+
+
       <div class="ui-g-12 ui-md-4 ui-fluid">
         <label>Telefone Fixo</label>
         <p-inputMask mask="(99)9999-9999"></p-inputMask>
@@ -135,6 +155,11 @@
         <label>Reside com</label>
         <input type="text" pInputText>
       </div>
+
+      <div class="ui-g-12 ui-fluid">
+        <hr>
+      </div>
+
       <div class="ui-g-12 ui-md-5 ui-fluid">
         <label>Escola de origem</label>
         <input type="text" pInputText>

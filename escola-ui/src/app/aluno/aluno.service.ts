@@ -77,4 +77,12 @@ export class AlunoService {
       .toPromise();
   }
 
+  buscar(cep: string) {
+    this.http.get('http://viacep.com.br/ws/${cep}/json/')
+      .toPromise()
+      .then( response => {
+        console.log(response);
+      });
+  }
+
 }

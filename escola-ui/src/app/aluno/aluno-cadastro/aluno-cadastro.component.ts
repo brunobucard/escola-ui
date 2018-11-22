@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { AlunoService } from '../aluno.service';
+import { Endereco } from '../../core/model';
 
 @Component({
   selector: 'app-aluno-cadastro',
@@ -7,9 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AlunoCadastroComponent implements OnInit {
 
-  constructor() { }
+  cep = new Endereco();
+
+  constructor(
+    private alunoService: AlunoService
+  ) { }
 
   ngOnInit() {
+  }
+
+  buscar() {
+    this.alunoService.buscar(this.cep.cep);
   }
 
 }
