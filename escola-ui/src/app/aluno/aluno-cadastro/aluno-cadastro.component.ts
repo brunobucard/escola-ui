@@ -19,7 +19,8 @@ export class AlunoCadastroComponent implements OnInit {
   }
 
   buscar() {
-    this.alunoService.buscar(this.cep.cep);
+    this.alunoService.buscar(this.cep.cep)
+      .then((cep: Endereco) => this.cep = cep);
   }
 
 }

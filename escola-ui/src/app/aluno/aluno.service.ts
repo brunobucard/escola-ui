@@ -1,10 +1,13 @@
-import { Aluno } from './../core/model';
+import { Http } from '@angular/http';
+import { Aluno, Endereco } from './../core/model';
 import { HttpParams, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { MoneyHttp } from '../seguranca/money-http';
+
 import { environment } from '../../environments/environment';
 
 import 'rxjs/add/operator/toPromise';
+import { config } from 'rxjs';
 
 export class AlunoFiltro {
   nome: string;
@@ -20,7 +23,9 @@ export class AlunoService {
 
   alunosUrl: string;
 
-  constructor(private http: MoneyHttp) {
+  constructor(
+    private http: MoneyHttp
+    ) {
     this.alunosUrl = `${environment.apiUrl}/alunos`;
   }
 
@@ -77,12 +82,25 @@ export class AlunoService {
       .toPromise();
   }
 
+
+
   buscar(cep: string) {
-    this.http.get('http://viacep.com.br/ws/${cep}/json/')
+    return this.http.get(`http://viacep.com.br/ws/${cep}/json/`)
       .toPromise()
-      .then( response => {
-        console.log(response);
+      .then(response => {
+        return this.converterRespostaParaCep(response);
       });
+  }
+
+  private converterRespostaParaCep(cepNaResposta): Endereco {
+    const cep = new Endereco();
+    cep.cep = cepNaResposta.cep;
+    cep.logradouro = cepNaResposta.logradouro;
+    cep.complemento = cepNaResposta.complemento;
+    cep.bairro = cepNaResposta.bairro;
+    cep.cidade = cepNaResposta.localidade;
+    cep.estado = cepNaResposta.uf;
+    return cep;
   }
 
 }
