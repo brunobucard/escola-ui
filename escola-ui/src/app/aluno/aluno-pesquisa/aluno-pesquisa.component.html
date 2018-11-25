@@ -30,8 +30,9 @@
           <tr>
               <th>Nome</th>
               <th>Sexo</th>
-              <th>Ações</th>
-              <th class="col-acoes-header"></th>
+              <th>Nascimento</th>
+              <th>Responsável</th>
+              <th class="col-acoes-header">Ações</th>
           </tr>
       </ng-template>
 
@@ -39,6 +40,8 @@
           <tr>
               <td>{{aluno.nome}}</td>
               <td>{{ aluno.sexo }}</td>
+              <td>{{ aluno.dataNascimento | date:'dd/MM/yyyy'}}</td>
+              <td>{{ aluno.responsavel.nome }}</td>
               <td class="col-acoes">
                 <a pButton icon="fa fa-pencil" pTooltip="Editar" tooltipPosition="top"
                   [routerLink]="['/alunos', aluno.codigo]"></a>

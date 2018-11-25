@@ -23,7 +23,7 @@
 
       <div class="ui-g-12 ui-md-1 ui-fluid">
         <label>Sexo</label>
-        <input type="text" pInputText placeholder="Sexo" name="sexo" ngModel #sexo="ngModel" required>
+        <p-dropdown name="sexo" placeholder="Selecione" [options]="sexos" [(ngModel)]="aluno.sexo" [autoWidth]="false" ngModel #sexo="ngModel" required></p-dropdown>
         <app-message [control]="sexo" error="required"
         text="Informe o sexo"></app-message>
       </div>
@@ -33,8 +33,8 @@
         <p-calendar dateFormat="dd/mm/yy" [monthNavigator]="true" [yearNavigator]="true" yearRange="1900:2030"
           name="dataNascimento" ngModel #dataNascimento="ngModel" required></p-calendar>
         <app-message [control]="dataNascimento" error="required" text="Informe a data de nascimento"></app-message>
-
       </div>
+
       <div class="ui-g-12 ui-md-2 ui-fluid">
         <label>Naturalidade</label>
         <input type="text" pInputText>
@@ -47,6 +47,23 @@
       <label>Nacionalidade</label>
         <input type="text" pInputText>
       </div>
+
+      <div class="ui-g-12 ui-md-2 ui-fluid">
+          <label>Cor/Raça</label>
+            <input type="text" pInputText>
+      </div>
+
+      <div class="ui-g-12 ui-md-8 ui-fluid">
+          <label>Estado civil</label>
+            <input type="text" pInputText>
+      </div>
+
+      <div class="ui-g-12 ui-md-2 ui-fluid">
+          <label>Data de ingresso</label>
+          <p-calendar dateFormat="dd/mm/yy" [monthNavigator]="true" [yearNavigator]="true" yearRange="1900:2030"
+            name="dataIngresso" ngModel #dataIngresso="ngModel" required></p-calendar>
+          <app-message [control]="dataIngresso" error="required" text="Informe a data"></app-message>
+        </div>
 
       <div class="ui-g-12 ui-fluid">
         <hr>
