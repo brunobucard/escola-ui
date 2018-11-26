@@ -7,6 +7,7 @@ import { PaginaNaoEncontradaComponent } from './core/pagina-nao-encontrada.compo
 const routes: Routes = [
 
   { path: 'alunos', loadChildren: './aluno/aluno.module#AlunoModule'},
+  { path: 'responsaveis', loadChildren: './responsavel/responsavel.module#ResponsavelModule'},
 
   { path: '', redirectTo: 'alunos', pathMatch: 'full' },
   { path: 'nao-autorizado', component: NaoAutorizadoComponent },
