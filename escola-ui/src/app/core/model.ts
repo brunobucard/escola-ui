@@ -2,7 +2,7 @@ export class Aluno {
   codigo: number;
   nome: string;
   sexo: string;
-  ativo: boolean;
+  ativo = true;
   dataNascimento: Date;
   naturalidade: string;
   naturalidadeEstado: string;

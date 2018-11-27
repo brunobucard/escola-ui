@@ -1,5 +1,5 @@
 <div class="container">
-  <form autocomplete="off">
+  <form #f="ngForm" autocomplete="off" (ngSubmit)="salvar(f)">
     <div class="ui-g">
 
       <div class="ui-g-12">
@@ -14,7 +14,7 @@
       <div class="ui-g-12 ui-fluid">
         <label>Nome</label>
         <input type="text" pInputText  name="nome"
-        ngModel #nome="ngModel" required>
+        [(ngModel)]="aluno.nome" #nome="ngModel" required>
 
         <app-message [control]="nome" error="required"
         text="Informe o nome"></app-message>
@@ -23,7 +23,7 @@
 
       <div class="ui-g-12 ui-md-1 ui-fluid">
         <label>Sexo</label>
-        <p-dropdown name="sexo" placeholder="Selecione" [options]="sexos" [(ngModel)]="aluno.sexo" [autoWidth]="false" ngModel #sexo="ngModel" required></p-dropdown>
+        <p-dropdown name="sexo" placeholder="Selecione" [options]="sexos" [(ngModel)]="aluno.sexo" [autoWidth]="false" ngModel #sexo="ngModel"></p-dropdown>
         <app-message [control]="sexo" error="required"
         text="Informe o sexo"></app-message>
       </div>
@@ -31,33 +31,33 @@
       <div class="ui-g-12 ui-md-2 ui-fluid">
         <label>Data de Nascimento</label>
         <p-calendar dateFormat="dd/mm/yy" [monthNavigator]="true" [yearNavigator]="true" yearRange="1900:2030"
-          name="dataNascimento" ngModel #dataNascimento="ngModel" required></p-calendar>
+          name="dataNascimento" [(ngModel)]="aluno.dataNascimento" #dataNascimento="ngModel" required></p-calendar>
         <app-message [control]="dataNascimento" error="required" text="Informe a data de nascimento"></app-message>
       </div>
 
       <div class="ui-g-12 ui-md-2 ui-fluid">
         <label>Naturalidade</label>
-        <input type="text" pInputText>
+        <input type="text" pInputText name="naturalidade" [(ngModel)]="aluno.naturalidade">
       </div>
       <div class="ui-g-12 ui-md-3 ui-fluid">
         <label>Estado</label>
-        <input type="text" pInputText>
+        <input type="text" pInputText name="naturalidadeEstado" [(ngModel)]="aluno.naturalidadeEstado">
       </div>
       <div class="ui-g-12 ui-md-4 ui-fluid">
       <label>Nacionalidade</label>
-        <input type="text" pInputText>
+        <input type="text" pInputText name="nacionalidade" [(ngModel)]="aluno.nacionalidade">
       </div>
 
       <div class="ui-g-12 ui-md-2 ui-fluid">
           <label>Cor/Raça</label>
-          <p-dropdown name="cor" placeholder="Selecione" [options]="cores" [(ngModel)]="aluno.cor" [autoWidth]="false" ngModel #cor="ngModel" required></p-dropdown>
+          <p-dropdown name="cor" placeholder="Selecione" [options]="cores" [(ngModel)]="aluno.cor" [autoWidth]="false" ngModel #cor="ngModel"></p-dropdown>
           <app-message [control]="cor" error="required"
           text="Informe uma opção"></app-message>
       </div>
 
       <div class="ui-g-12 ui-md-8 ui-fluid">
           <label>Estado civil</label>
-          <p-dropdown name="estadoCivil" placeholder="Selecione" [options]="estadoCivis" [(ngModel)]="aluno.estadoCivil" [autoWidth]="false" ngModel #estadoCivil="ngModel" required></p-dropdown>
+          <p-dropdown name="estadoCivil" placeholder="Selecione" [options]="estadoCivis" [(ngModel)]="aluno.estadoCivil" [autoWidth]="false" ngModel #estadoCivil="ngModel"></p-dropdown>
           <app-message [control]="estadoCivil" error="required"
           text="Informe uma opção"></app-message>
       </div>
@@ -65,7 +65,7 @@
       <div class="ui-g-12 ui-md-2 ui-fluid">
           <label>Data de ingresso</label>
           <p-calendar dateFormat="dd/mm/yy" [monthNavigator]="true" [yearNavigator]="true" yearRange="1900:2030"
-            name="dataIngresso" ngModel #dataIngresso="ngModel" required></p-calendar>
+            name="dataIngresso" ngModel #dataIngresso="ngModel"></p-calendar>
           <app-message [control]="dataIngresso" error="required" text="Informe a data"></app-message>
         </div>
 
@@ -400,6 +400,14 @@
 
 
     <p-tabPanel header="Aspectos de saúde">
+
+        <div class="ui-g-12 ui-md-1 ui-fluid">
+            <label>Tipo sanguineo</label>
+            <p-dropdown name="tipoSanguineo" placeholder="Selecione" [options]="sanguineos" [(ngModel)]="aluno.tipoSanguineo" [autoWidth]="false" #tipoSanguineo="ngModel" required></p-dropdown>
+            <app-message [control]="tipoSanguineo" error="required"
+            text="Informe o tipo sanguineo"></app-message>
+          </div>
+
       <div class="ui-g-12 ui-fluid" style="margin-bottom:10px">
         <label>Utiliza medicação</label>
         <p-radioButton name="group1" value="Option 1" label="Alopática" [(ngModel)]="val1" inputId="opt1"></p-radioButton>
@@ -707,8 +715,9 @@
 
 
       <div class="ui-g-12">
-        <button pButton type="button" label="Salvar"></button>
-        <button pButton type="button" label="Limpar"></button>
+        <button pButton type="submit" label="Salvar" [disabled]="f.invalid"></button>
+        <button pButton type="button" label="Nova" class="ui-button-info"
+          (click)="nova(f)"></button>
         <button pButton type="button" label="Cancelar" routerLink="/alunos"></button>
       </div>
 
