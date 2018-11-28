@@ -93,14 +93,14 @@ export class AlunoService {
   }
 
   private converterRespostaParaCep(cepNaResposta): Endereco {
-    const cep = new Endereco();
-    cep.cep = cepNaResposta.cep;
-    cep.logradouro = cepNaResposta.logradouro;
-    cep.complemento = cepNaResposta.complemento;
-    cep.bairro = cepNaResposta.bairro;
-    cep.cidade = cepNaResposta.localidade;
-    cep.estado = cepNaResposta.uf;
-    return cep;
+    const endereco = new Endereco();
+    endereco.cep = cepNaResposta.cep;
+    endereco.logradouro = cepNaResposta.logradouro;
+    endereco.complemento = cepNaResposta.complemento;
+    endereco.bairro = cepNaResposta.bairro;
+    endereco.cidade = cepNaResposta.localidade;
+    endereco.estado = cepNaResposta.uf;
+    return endereco;
   }
 
 }

@@ -7,6 +7,7 @@ import { AlunoService } from '../aluno.service';
 import { Endereco } from '../../core/model';
 import { MessageService } from 'primeng/api';
 import { ActivatedRoute, Router } from '@angular/router';
+import { ResponsavelService } from '../../responsavel/responsavel.service';
 
 @Component({
   selector: 'app-aluno-cadastro',
@@ -31,11 +32,14 @@ export class AlunoCadastroComponent implements OnInit {
     { label: 'AB+', value: 'AB_POSITIVO'}
   ];
 
+  responsaveis = [];
+
   aluno = new Aluno();
-  cep = new Endereco();
+  endereco = new Endereco();
 
   constructor(
     private alunoService: AlunoService,
+    private responsavelService: ResponsavelService,
     private messageService: MessageService,
     private errorHandler: ErrorHandlerService,
     private route: ActivatedRoute,
@@ -51,6 +55,8 @@ export class AlunoCadastroComponent implements OnInit {
     if (codigoAluno) {
       this.carregarAluno(codigoAluno);
     }
+
+    this.carregarResponsaveis();
   }
 
   get editando() {
@@ -109,9 +115,18 @@ export class AlunoCadastroComponent implements OnInit {
     this.title.setTitle('Edição de aluno: ${this.aluno.nome}');
   }
 
+  carregarResponsaveis() {
+    this.responsavelService.listarTodos()
+      .then(responsaveis => {
+        this.responsaveis = responsaveis
+        .map(r => ({ label: r.nome, value: r.codigo }));
+      })
+      .catch(erro => this.errorHandler.handle(erro));
+  }
+
   buscar() {
-    this.alunoService.buscar(this.cep.cep)
-      .then((cep: Endereco) => this.cep = cep);
+    this.alunoService.buscar(this.aluno.endereco.cep)
+      .then((endereco: Endereco) => this.endereco = endereco);
   }
 
 }

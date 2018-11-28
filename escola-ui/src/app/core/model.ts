@@ -7,7 +7,7 @@ export class Aluno {
   naturalidade: string;
   naturalidadeEstado: string;
   nacionalidade: string;
-  cpf: string;
+  cpf: number;
   identidade: string;
   identidadeEmissao: Date;
   identidadeEmissor: string;

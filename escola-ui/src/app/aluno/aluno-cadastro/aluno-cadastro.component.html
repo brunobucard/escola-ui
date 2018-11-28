@@ -65,7 +65,7 @@
       <div class="ui-g-12 ui-md-2 ui-fluid">
           <label>Data de ingresso</label>
           <p-calendar dateFormat="dd/mm/yy" [monthNavigator]="true" [yearNavigator]="true" yearRange="1900:2030"
-            name="dataIngresso" ngModel #dataIngresso="ngModel"></p-calendar>
+            name="dataIngresso" [(ngModel)]="aluno.dataIngresso" #dataIngresso="ngModel"></p-calendar>
           <app-message [control]="dataIngresso" error="required" text="Informe a data"></app-message>
         </div>
 
@@ -75,47 +75,47 @@
 
       <div class="ui-g-12 ui-md-2 ui-fluid">
         <label>CPF</label>
-        <p-inputMask mask="999.999.999-99"></p-inputMask>
+        <p-inputMask mask="999.999.999-99" [(ngModel)]="aluno.cpf" name="cpf"></p-inputMask>
       </div>
       <div class="ui-g-12 ui-md-2 ui-fluid">
         <label>Carteira de Identidade</label>
-        <input type="text" pInputText>
+        <input type="text" pInputText name="identidade" [(ngModel)]="aluno.identidade">
       </div>
       <div class="ui-g-12 ui-md-2 ui-fluid">
         <label>Data de Emissão</label>
-        <p-calendar dateFormat="dd/mm/yy" [monthNavigator]="true" [yearNavigator]="true" yearRange="1900:2030"></p-calendar>
+        <p-calendar dateFormat="dd/mm/yy" [monthNavigator]="true" [yearNavigator]="true" yearRange="1900:2030" name="identidadeEmissao" [(ngModel)]="aluno.identidadeEmissao"></p-calendar>
       </div>
       <div class="ui-g-12 ui-md-3 ui-fluid">
         <label>Orgão Emissor</label>
-        <input type="text" pInputText>
+        <input type="text" pInputText name="identidadeEmissor" [(ngModel)]="aluno.identidadeEmissor">
       </div>
       <div class="ui-g-12 ui-md-3 ui-fluid">
         <label>Estado emissor</label>
-        <input type="text" pInputText>
+        <input type="text" pInputText name="identidadeEmissorEstado" [(ngModel)]="aluno.identidadeEmissorEstado">
       </div>
       <div class="ui-g-12 ui-md-5 ui-fluid">
         <label>Nº Certidão de Nascimento</label>
-        <input type="text" pInputText>
+        <input type="text" pInputText name="certidaoNascimento" [(ngModel)]="aluno.certidaoNascimento">
       </div>
       <div class="ui-g-12 ui-md-2 ui-fluid">
         <label>Data Registro</label>
-        <p-calendar dateFormat="dd/mm/yy" [monthNavigator]="true" [yearNavigator]="true" yearRange="1900:2030"></p-calendar>
+        <p-calendar dateFormat="dd/mm/yy" [monthNavigator]="true" [yearNavigator]="true" yearRange="1900:2030" name="certidaoData" [(ngModel)]="aluno.certidaoData"></p-calendar>
       </div>
       <div class="ui-g-12 ui-md-3 ui-fluid">
         <label>Livro</label>
-        <input type="text" pInputText>
+        <input type="text" pInputText name="certidaoLivro" [(ngModel)]="aluno.certidaoLivro">
       </div>
       <div class="ui-g-12 ui-md-2 ui-fluid">
         <label>Nº das Folhas</label>
-        <input type="text" pInputText>
+        <input type="text" pInputText name="certidaoFolhas" [(ngModel)]="aluno.certidaoFolhas">
       </div>
       <div class="ui-g-12 ui-md-9 ui-fluid">
         <label>Cartório</label>
-        <input type="text" pInputText>
+        <input type="text" pInputText name="certidaoCartorio" [(ngModel)]="aluno.certidaoCartorio">
       </div>
       <div class="ui-g-12 ui-md-3 ui-fluid">
         <label>Estado emissor</label>
-        <input type="text" pInputText>
+        <input type="text" pInputText name="certidaoEstado" [(ngModel)]="aluno.certidaoEstado">
       </div>
 
       <div class="ui-g-12 ui-fluid">
@@ -124,57 +124,57 @@
 
       <div class="ui-g-12 ui-md-2 ui-fluid">
         <label>CEP</label>
-        <p-inputMask mask="99999-999" id="cep" name="cep" [(ngModel)]="cep.cep" (change)="buscar()"></p-inputMask>
+        <p-inputMask mask="99999-999" id="cep" name="cep" [(ngModel)]="aluno.endereco.cep" (change)="buscar()"></p-inputMask>
       </div>
 
 
 
       <div class="ui-g-12 ui-md-6 ui-fluid">
         <label>Endereço Residêncial</label>
-        <input type="text" pInputText id="endereco" name="endereco" [(ngModel)]="cep.logradouro">
+        <input type="text" pInputText id="endereco" name="endereco" [(ngModel)]="aluno.endereco.logradouro">
       </div>
       <div class="ui-g-12 ui-md-4 ui-fluid">
         <label>Complemento</label>
-        <input type="text" pInputText id="complemento" name="complemento" [(ngModel)]="cep.complemento">
+        <input type="text" pInputText id="complemento" name="complemento" [(ngModel)]="aluno.endereco.complemento">
       </div>
       <div class="ui-g-12 ui-md-5 ui-fluid">
         <label>Bairro</label>
-        <input type="text" pInputText id="bairro" name="bairro" [(ngModel)]="cep.bairro">
+        <input type="text" pInputText id="bairro" name="bairro" [(ngModel)]="aluno.endereco.bairro">
       </div>
       <div class="ui-g-12 ui-md-5 ui-fluid">
         <label>Cidade</label>
-        <input type="text" pInputText id="cidade" name="cidade" [(ngModel)]="cep.cidade">
+        <input type="text" pInputText id="cidade" name="cidade" [(ngModel)]="aluno.endereco.cidade">
       </div>
 
       <div class="ui-g-12 ui-md-2 ui-fluid">
         <label>Estado</label>
-        <input type="text" pInputText id="estado" name="estado" [(ngModel)]="cep.estado">
+        <input type="text" pInputText id="estado" name="estado" [(ngModel)]="aluno.endereco.estado">
       </div>
 
 
       <div class="ui-g-12 ui-md-4 ui-fluid">
         <label>Telefone Fixo</label>
-        <p-inputMask mask="(99)9999-9999"></p-inputMask>
+      <p-inputMask mask="(99)9999-9999" name="telefone" [(ngModel)]="aluno.telefone"></p-inputMask>
       </div>
       <div class="ui-g-12 ui-md-4 ui-fluid">
         <label>Celular</label>
-        <p-inputMask mask="(99)99999-9999"></p-inputMask>
+        <p-inputMask mask="(99)99999-9999" name="celular" [(ngModel)]="aluno.celular"></p-inputMask>
       </div>
       <div class="ui-g-12 ui-md-4 ui-fluid">
         <label>E-mail</label>
-        <input type="text" pInputText>
+        <input type="text" pInputText name="email" [(ngModel)]="aluno.email">
       </div>
       <div class="ui-g-12 ui-md-4 ui-fluid">
         <label>Pais Separados</label>
-        <input type="text" pInputText>
+        <input type="text" pInputText name="paisSeparados" [(ngModel)]="aluno.paisSeparados">
       </div>
       <div class="ui-g-12 ui-md-4 ui-fluid">
         <label>Religião</label>
-        <input type="text" pInputText>
+        <input type="text" pInputText name="religiao" [(ngModel)]="aluno.religiao">
       </div>
       <div class="ui-g-12 ui-md-4 ui-fluid">
         <label>Reside com</label>
-        <input type="text" pInputText>
+        <input type="text" pInputText name="resideCom" [(ngModel)]="aluno.resideCom">
       </div>
 
       <div class="ui-g-12 ui-fluid">
@@ -183,23 +183,34 @@
 
       <div class="ui-g-12 ui-md-5 ui-fluid">
         <label>Escola de origem</label>
-        <input type="text" pInputText>
+        <input type="text" pInputText name="escolaOrigem" [(ngModel)]="aluno.escolaOrigem">
       </div>
       <div class="ui-g-12 ui-md-5 ui-fluid">
         <label>Cidade</label>
-        <input type="text" pInputText>
+        <input type="text" pInputText name="escolaOrigemCidade" [(ngModel)]="aluno.escolaOrigemCidade">
       </div>
       <div class="ui-g-12 ui-md-2 ui-fluid">
         <label>Estado</label>
-        <input type="text" pInputText>
+        <input type="text" pInputText name="escolaOrigemEstado" [(ngModel)]="aluno.escolaOrigemEstado">
       </div>
+      </p-tabPanel>
+
+      <p-tabPanel header="Responsável">
+
+          <div class="ui-g-12 ui-md-6 ui-fluid">
+              <label>Responsável Financeiro</label>
+              <p-dropdown name="responsavel" placeholder="Selecione" [options]="responsaveis" [(ngModel)]="aluno.responsavel.codigo" [autoWidth]="false" #responsavel="ngModel" [filter]="true" required></p-dropdown>
+              <app-message [control]="responsavel" error="required"
+              text="Informe o responsável financeiro do aluno"></app-message>
+            </div>
+
       </p-tabPanel>
 
       <p-tabPanel header="Dados do Pai">
 
       <div class="ui-g-12 ui-fluid">
         <label>Nome Completo</label>
-        <input type="text" pInputText>
+        <input type="text" name="nomePai" pInputText [(ngModel)]="aluno.nomePai">
       </div>
       <div class="ui-g-12 ui-md-3 ui-fluid">
         <label>Data de Nascimento</label>
@@ -301,7 +312,7 @@
 
       <div class="ui-g-12 ui-fluid">
         <label>Nome Completo</label>
-        <input type="text" pInputText>
+        <input type="text" pInputText name="nomeMae" [(ngModel)]="aluno.nomeMae">
       </div>
       <div class="ui-g-12 ui-md-3 ui-fluid">
         <label>Data de Nascimento</label>
@@ -401,7 +412,7 @@
 
     <p-tabPanel header="Aspectos de saúde">
 
-        <div class="ui-g-12 ui-md-1 ui-fluid">
+        <div class="ui-g-12 ui-md-2 ui-fluid">
             <label>Tipo sanguineo</label>
             <p-dropdown name="tipoSanguineo" placeholder="Selecione" [options]="sanguineos" [(ngModel)]="aluno.tipoSanguineo" [autoWidth]="false" #tipoSanguineo="ngModel" required></p-dropdown>
             <app-message [control]="tipoSanguineo" error="required"
