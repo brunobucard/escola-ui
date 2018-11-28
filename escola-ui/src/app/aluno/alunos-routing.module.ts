@@ -19,6 +19,12 @@ const routes: Routes = [
     canActivate: [AuthGuard],
     data: { roles: ['ROLE_CADASTRAR_ALUNO'] }
   },
+  {
+    path: ':codigo',
+    component: AlunoCadastroComponent,
+    canActivate: [AuthGuard],
+    data: { roles: ['ROLE_CADASTRAR_ALUNO'] }
+  },
 
 ];
 
