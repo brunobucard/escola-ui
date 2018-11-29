@@ -2,6 +2,9 @@ import { Http } from '@angular/http';
 import { Aluno, Endereco } from './../core/model';
 import { HttpParams, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+
+import * as moment from 'moment';
+
 import { MoneyHttp } from '../seguranca/money-http';
 
 import { environment } from '../../environments/environment';
@@ -79,7 +82,13 @@ export class AlunoService {
 
   buscarPorCodigo(codigo: number): Promise<Aluno> {
     return this.http.get<Aluno>(`${this.alunosUrl}/${codigo}`)
-      .toPromise();
+      .toPromise()
+      .then(response => {
+        const aluno = response;
+
+        this.converterStringsParaDatas([aluno]);
+        return aluno;
+      });
   }
 
 
@@ -92,15 +101,27 @@ export class AlunoService {
       });
   }
 
-  private converterRespostaParaCep(cepNaResposta): Endereco {
-    const endereco = new Endereco();
-    endereco.cep = cepNaResposta.cep;
-    endereco.logradouro = cepNaResposta.logradouro;
-    endereco.complemento = cepNaResposta.complemento;
-    endereco.bairro = cepNaResposta.bairro;
-    endereco.cidade = cepNaResposta.localidade;
-    endereco.estado = cepNaResposta.uf;
-    return endereco;
+  private converterRespostaParaCep(cepNaResposta): Aluno {
+    const aluno = new Aluno();
+    aluno.endereco.cep = cepNaResposta.cep;
+    aluno.endereco.logradouro = cepNaResposta.logradouro;
+    aluno.endereco.complemento = cepNaResposta.complemento;
+    aluno.endereco.bairro = cepNaResposta.bairro;
+    aluno.endereco.cidade = cepNaResposta.localidade;
+    aluno.endereco.estado = cepNaResposta.uf;
+    return aluno;
+  }
+
+  private converterStringsParaDatas(alunos: Aluno[]) {
+    for (const aluno of alunos) {
+      aluno.dataNascimento = moment(aluno.dataNascimento,
+      'YYYY-MM-DD').toDate();
+
+      if (aluno.certidaoData) {
+        aluno.certidaoData = moment(aluno.certidaoData,
+        'YYYY-MM-DD').toDate();
+      }
+    }
   }
 
 }

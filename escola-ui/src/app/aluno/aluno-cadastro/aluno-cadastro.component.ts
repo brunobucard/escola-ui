@@ -57,7 +57,7 @@ export class AlunoCadastroComponent implements OnInit {
     }
 
     this.carregarResponsaveis();
-  }
+ }
 
   get editando() {
     return Boolean(this.aluno.codigo);
@@ -125,8 +125,8 @@ export class AlunoCadastroComponent implements OnInit {
   }
 
   buscar() {
-    this.alunoService.buscar(this.endereco.cep)
-      .then((endereco: Endereco) => this.endereco = endereco);
+    this.alunoService.buscar(this.aluno.endereco.cep)
+      .then((aluno: Aluno) => this.aluno = aluno);
   }
 
 }
