@@ -124,31 +124,31 @@
 
       <div class="ui-g-12 ui-md-2 ui-fluid">
         <label>CEP</label>
-        <p-inputMask mask="99999-999" id="cep" name="cep" [(ngModel)]="aluno.endereco.cep" (change)="buscar()"></p-inputMask>
+        <p-inputMask mask="99999-999" id="cep" name="cep" [(ngModel)]="endereco.cep" (change)="buscar()"></p-inputMask>
       </div>
 
 
 
       <div class="ui-g-12 ui-md-6 ui-fluid">
         <label>Endereço Residêncial</label>
-        <input type="text" pInputText id="endereco" name="endereco" [(ngModel)]="aluno.endereco.logradouro">
+        <input type="text" pInputText id="endereco" name="endereco" [(ngModel)]="endereco.logradouro">
       </div>
       <div class="ui-g-12 ui-md-4 ui-fluid">
         <label>Complemento</label>
-        <input type="text" pInputText id="complemento" name="complemento" [(ngModel)]="aluno.endereco.complemento">
+        <input type="text" pInputText id="complemento" name="complemento" [(ngModel)]="endereco.complemento">
       </div>
       <div class="ui-g-12 ui-md-5 ui-fluid">
         <label>Bairro</label>
-        <input type="text" pInputText id="bairro" name="bairro" [(ngModel)]="aluno.endereco.bairro">
+        <input type="text" pInputText id="bairro" name="bairro" [(ngModel)]="endereco.bairro">
       </div>
       <div class="ui-g-12 ui-md-5 ui-fluid">
         <label>Cidade</label>
-        <input type="text" pInputText id="cidade" name="cidade" [(ngModel)]="aluno.endereco.cidade">
+        <input type="text" pInputText id="cidade" name="cidade" [(ngModel)]="endereco.cidade">
       </div>
 
       <div class="ui-g-12 ui-md-2 ui-fluid">
         <label>Estado</label>
-        <input type="text" pInputText id="estado" name="estado" [(ngModel)]="aluno.endereco.estado">
+        <input type="text" pInputText id="estado" name="estado" [(ngModel)]="endereco.estado">
       </div>
 
 

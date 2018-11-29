@@ -125,7 +125,7 @@ export class AlunoCadastroComponent implements OnInit {
   }
 
   buscar() {
-    this.alunoService.buscar(this.aluno.endereco.cep)
+    this.alunoService.buscar(this.endereco.cep)
       .then((endereco: Endereco) => this.endereco = endereco);
   }
 
