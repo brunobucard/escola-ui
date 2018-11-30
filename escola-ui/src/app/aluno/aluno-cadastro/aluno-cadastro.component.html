@@ -62,14 +62,14 @@
           text="Informe uma opção"></app-message>
       </div>
 
-      <!--
+
       <div class="ui-g-12 ui-md-2 ui-fluid">
           <label>Data de ingresso</label>
           <p-calendar dateFormat="dd/mm/yy" [monthNavigator]="true" [yearNavigator]="true" yearRange="1900:2030"
             name="dataIngresso" [(ngModel)]="aluno.dataIngresso" #dataIngresso="ngModel"></p-calendar>
           <app-message [control]="dataIngresso" error="required" text="Informe a data"></app-message>
         </div>
-      -->
+
 
       <div class="ui-g-12 ui-fluid">
         <hr>
@@ -172,10 +172,13 @@
         <label>E-mail</label>
         <input type="text" pInputText name="email" [(ngModel)]="aluno.email">
       </div>
+
       <div class="ui-g-12 ui-md-4 ui-fluid">
         <label>Pais Separados</label>
-        <input type="text" pInputText name="paisSeparados" [(ngModel)]="aluno.paisSeparados">
+        <p-selectButton name="paisSeparados" [options]="paisSeparados"
+          [(ngModel)]="aluno.paisSeparados"></p-selectButton>
       </div>
+
       <div class="ui-g-12 ui-md-4 ui-fluid">
         <label>Religião</label>
         <input type="text" pInputText name="religiao" [(ngModel)]="aluno.religiao">

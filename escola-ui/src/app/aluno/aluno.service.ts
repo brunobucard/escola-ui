@@ -126,6 +126,11 @@ export class AlunoService {
         aluno.identidadeEmissao = moment(aluno.identidadeEmissao,
           'YYYY-MM-DD').toDate();
       }
+
+      if (aluno.dataIngresso) {
+        aluno.dataIngresso = moment(aluno.dataIngresso,
+          'YYYY-MM-DD').toDate();
+      }
     }
   }
 
