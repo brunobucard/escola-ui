@@ -32,6 +32,25 @@ export class AlunoCadastroComponent implements OnInit {
     { label: 'AB+', value: 'AB_POSITIVO'}
   ];
 
+  cores = [
+    { label: 'Branco', value: 'BRANCO'},
+    { label: 'Preto', value: 'PRETO'},
+    { label: 'Pardo', value: 'PARDO'},
+    { label: 'Amarelo', value: 'AMARELO'},
+    { label: 'Indigena', value: 'INDIGENA'},
+  ];
+
+  estadosCivis = [
+    { label: 'Solteiro', value: 'SOLTEIRO'},
+    { label: 'Casado', value: 'CASADO'},
+    { label: 'União estável', value: 'UNIAO_ESTAVEL'},
+    { label: 'Divorciado', value: 'DIVORCIADO'},
+    { label: 'Separado', value: 'SEPARADO'},
+    { label: 'Viuvo', value: 'VIUVO'}
+  ];
+
+
+
   responsaveis = [];
 
   aluno = new Aluno();

@@ -30,7 +30,11 @@ export class Aluno {
   senha: string;
   nomePai: string;
   nomeMae: string;
+  cor: string;
+  estadoCivil: string;
+  dataIngresso: Date;
   tipoSanguineo: string;
+  observacao: string;
   endereco = new Endereco();
   responsavel = new Responsavel();
 }

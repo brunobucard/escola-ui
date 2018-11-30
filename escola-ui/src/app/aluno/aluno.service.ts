@@ -121,6 +121,11 @@ export class AlunoService {
         aluno.certidaoData = moment(aluno.certidaoData,
         'YYYY-MM-DD').toDate();
       }
+
+      if (aluno.identidadeEmissao) {
+        aluno.identidadeEmissao = moment(aluno.identidadeEmissao,
+          'YYYY-MM-DD').toDate();
+      }
     }
   }
 
