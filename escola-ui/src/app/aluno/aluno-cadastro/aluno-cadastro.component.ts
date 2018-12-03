@@ -49,7 +49,7 @@ export class AlunoCadastroComponent implements OnInit {
     { label: 'Viuvo', value: 'VIUVO'}
   ];
 
-  paisSeparados = [
+  booleano = [
     { label: 'Sim', value: 1 },
     { label: 'Não', value: 0 },
   ];

@@ -175,7 +175,7 @@
 
       <div class="ui-g-12 ui-md-2 ui-fluid">
         <label>Pais Separados</label>
-        <p-selectButton name="paisSeparados" [options]="paisSeparados"
+        <p-selectButton name="paisSeparados" [options]="booleano"
           [(ngModel)]="aluno.paisSeparados"></p-selectButton>
       </div>
 
@@ -221,7 +221,7 @@
 
       <div class="ui-g-12 ui-md-8 ui-fluid">
         <label>Nome Completo</label>
-        <input type="text" name="nomePai" pInputText [(ngModel)]="aluno.nomePai">
+        <input type="text"  pInputText >
       </div>
       <div class="ui-g-12 ui-md-2 ui-fluid">
         <label>Data de Nascimento</label>
@@ -346,7 +346,7 @@
 
         <div class="ui-g-12 ui-md-8 ui-fluid">
             <label>Nome Completo</label>
-            <input type="text" name="nomeMae" pInputText [(ngModel)]="aluno.nomeMae">
+            <input type="text"  pInputText>
           </div>
           <div class="ui-g-12 ui-md-2 ui-fluid">
             <label>Data de Nascimento</label>
@@ -491,8 +491,8 @@
 
       <div class="ui-g-12 ui-fluid" style="margin-bottom:10px">
         <label>Doença congênita</label>
-        <p-radioButton name="group2" value="Option 1" label="Não" [(ngModel)]="val2" inputId="opt1"></p-radioButton>
-        <p-radioButton name="group2" value="Option 2" label="Sim" [(ngModel)]="val2" inputId="opt2"></p-radioButton>
+        <p-selectButton name="doencaCongenita" [options]="booleano"
+        [(ngModel)]="aluno.doencaCongenita"></p-selectButton>
         <div class="ui-md-6 ui-fluid">
           <label>Qual?</label>
           <input type="text" pInputText>
@@ -502,8 +502,8 @@
 
         <div class="ui-g-12 ui-fluid" style="margin-bottom:10px">
             <label>Hipertensão</label>
-            <p-radioButton name="group3" value="Option 1" label="Não" [(ngModel)]="val3" inputId="opt1"></p-radioButton>
-            <p-radioButton name="group3" value="Option 2" label="Sim" [(ngModel)]="val3" inputId="opt2"></p-radioButton>
+            <p-selectButton name="hipertensao" [options]="booleano"
+            [(ngModel)]="aluno.hipertensao"></p-selectButton>
         </div>
 
         <div class="ui-g-12 ui-fluid" style="margin-bottom:10px">
