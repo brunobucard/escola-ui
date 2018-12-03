@@ -62,6 +62,21 @@ export class Responsavel {
   relacionamento: string;
   telefone: string;
   celular: string;
+  dataNascimento: Date;
+  nacionalidade: string;
+  cpf: string;
+  identidade: string;
+  identidadeEmissao: Date;
+  religiao: string;
+  escolaridade: string;
+  profissao: string;
+  empresa: string;
+  funcao: string;
+  enderecoComercial: string;
+  telefoneComercial: string;
+  cor: string;
+  estadoCivil: string;
+  sexo: string;
   endereco = new Endereco();
 }
 
