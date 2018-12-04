@@ -37,7 +37,7 @@ export class Aluno {
   doencaCongenita: boolean;
   hipertensao: boolean;
   epilepsia: boolean;
-  epilepsia_tratamento: boolean;
+  epilepsiaTratamento: boolean;
   hemofilia: boolean;
   diabetes: boolean;
   diabetesInsulina: boolean;

@@ -491,46 +491,60 @@
 
       <div class="ui-g-12 ui-fluid" style="margin-bottom:10px">
         <label>Doença congênita</label>
-        <p-selectButton name="doencaCongenita" [options]="booleano"
-        [(ngModel)]="aluno.doencaCongenita"></p-selectButton>
+        <div class="ui-md-2">
+          <p-selectButton name="doencaCongenita" [options]="booleano"
+           [(ngModel)]="aluno.doencaCongenita"></p-selectButton>
+        </div>
         <div class="ui-md-6 ui-fluid">
           <label>Qual?</label>
-          <input type="text" pInputText>
+          <input type="text" pInputText  >
         </div>
 
       </div>
 
         <div class="ui-g-12 ui-fluid" style="margin-bottom:10px">
             <label>Hipertensão</label>
-            <p-selectButton name="hipertensao" [options]="booleano"
-            [(ngModel)]="aluno.hipertensao"></p-selectButton>
+            <div class="ui-md-2">
+              <p-selectButton name="hipertensao" [options]="booleano"
+                [(ngModel)]="aluno.hipertensao"></p-selectButton>
+            </div>
         </div>
 
         <div class="ui-g-12 ui-fluid" style="margin-bottom:10px">
             <label>Epilepsia</label>
-            <p-radioButton name="group4" value="Option 1" label="Não" [(ngModel)]="val4" inputId="opt1"></p-radioButton>
-            <p-radioButton name="group4" value="Option 2" label="Sim" [(ngModel)]="val4" inputId="opt2"></p-radioButton>
-          <div class="ui-md-6 ui-fluid">
+            <div class="ui-md-2">
+              <p-selectButton name="epilepsia" [options]="booleano"
+                [(ngModel)]="aluno.epilepsia"></p-selectButton>
+            </div>
+          <div class="ui-g-12 ui-fluid">
             <label>Está em tratamento?</label>
-            <p-radioButton name="group5" value="Option 1" label="Não" [(ngModel)]="val5" inputId="opt1"></p-radioButton>
-            <p-radioButton name="group5" value="Option 2" label="Sim" [(ngModel)]="val5" inputId="opt2"></p-radioButton>
+            <div class="ui-md-2">
+              <p-selectButton name="tratamento" [options]="booleano"
+                [(ngModel)]="aluno.epilepsiaTratamento"></p-selectButton>
+            </div>
           </div>
         </div>
 
         <div class="ui-g-12 ui-fluid" style="margin-bottom:10px">
             <label>Hemofilia</label>
-            <p-radioButton name="group6" value="Option 1" label="Não" [(ngModel)]="val6" inputId="opt1"></p-radioButton>
-            <p-radioButton name="group6" value="Option 2" label="Sim" [(ngModel)]="val6" inputId="opt2"></p-radioButton>
+            <div class="ui-md-2">
+              <p-selectButton name="hemofilia" [options]="booleano"
+                [(ngModel)]="aluno.hemofilia"></p-selectButton>
+            </div>
         </div>
 
         <div class="ui-g-12 ui-fluid" style="margin-bottom:10px">
           <label>Diabetes</label>
-          <p-radioButton name="group7" value="Option 1" label="Não" [(ngModel)]="val7" inputId="opt1"></p-radioButton>
-          <p-radioButton name="group7" value="Option 2" label="Sim" [(ngModel)]="val7" inputId="opt2"></p-radioButton>
-          <div class="ui-md-6 ui-fluid">
+          <div class="ui-md-2">
+            <p-selectButton name="diabetes" [options]="booleano"
+              [(ngModel)]="aluno.diabetes"></p-selectButton>
+          </div>
+          <div class="ui-g-12 ui-fluid">
             <label>É dependente de insulina</label>
-            <p-radioButton name="group8" value="Option 1" label="Não" [(ngModel)]="val8" inputId="opt1"></p-radioButton>
-            <p-radioButton name="group8" value="Option 2" label="Sim" [(ngModel)]="val8" inputId="opt2"></p-radioButton>
+            <div class="ui-md-2">
+              <p-selectButton name="insulina" [options]="booleano"
+                [(ngModel)]="aluno.diabetesInsulina"></p-selectButton>
+            </div>
           </div>
         </div>
 
