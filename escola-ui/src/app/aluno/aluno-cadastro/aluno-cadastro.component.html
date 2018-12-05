@@ -550,78 +550,61 @@
 
         <div class="ui-g-12 ui-fluid" style="margin-bottom:10px">
             <label>Asma</label>
-            <p-radioButton name="group9" value="Option 1" label="Não" [(ngModel)]="val9" inputId="opt1"></p-radioButton>
-            <p-radioButton name="group9" value="Option 2" label="Sim" [(ngModel)]="val9" inputId="opt2"></p-radioButton>
+            <div class="ui-md-2">
+              <p-selectButton name="asma" [options]="booleano"
+                [(ngModel)]="aluno.asma"></p-selectButton>
+            </div>
         </div>
 
         <div class="ui-g-12 ui-fluid" style="margin-bottom:10px">
             <label>Alergia a algum tipo de medicamento tópico, oral ou injetável?</label>
-            <p-radioButton name="group10" value="Option 1" label="Não" [(ngModel)]="val10" inputId="opt1"></p-radioButton>
-            <p-radioButton name="group10" value="Option 2" label="Sim" [(ngModel)]="val10" inputId="opt2"></p-radioButton>
+            <div class="ui-md-2">
+              <p-selectButton name="alergiaMedicamento" [options]="booleano"
+                [(ngModel)]="aluno.alergiaMedicamento"></p-selectButton>
+            </div>
             <div class="ui-md-6 ui-fluid">
                 <label>Qual?</label>
-                <input type="text" pInputText>
+                <input type="text" pInputText name="alergiaMedicamentoDescricao" [(ngModel)]="aluno.alergiaMedicamentoDescricao" >
             </div>
         </div>
 
         <div class="ui-g-12 ui-fluid" style="margin-bottom:10px">
             <label>Esta fazendo algum tipo de tratamento médico?</label>
-            <p-radioButton name="group11" value="Option 1" label="Não" [(ngModel)]="val11" inputId="opt1"></p-radioButton>
-            <p-radioButton name="group11" value="Option 2" label="Sim" [(ngModel)]="val11" inputId="opt2"></p-radioButton>
+            <div class="ui-md-2">
+              <p-selectButton name="tratamentoMedico" [options]="booleano"
+                [(ngModel)]="aluno.tratamentoMedico"></p-selectButton>
+            </div>
             <div class="ui-md-6 ui-fluid">
                 <label>Qual?</label>
-                <input type="text" pInputText>
+                <input type="text" pInputText name="tratamentoMedicoDescricao" [(ngModel)]="aluno.tratamentoMedicoDescricao" >
             </div>
         </div>
 
         <div class="ui-g-12 ui-fluid" style="margin-bottom:10px">
             <label>Faz uso de medicação específica?</label>
-            <p-radioButton name="group12" value="Option 1" label="Não" [(ngModel)]="val12" inputId="opt1"></p-radioButton>
-            <p-radioButton name="group12" value="Option 2" label="Sim" [(ngModel)]="val12" inputId="opt2"></p-radioButton>
+            <div class="ui-md-2">
+              <p-selectButton name="medicacaoEspecifica" [options]="booleano"
+                [(ngModel)]="aluno.medicacaoEspecifica"></p-selectButton>
+            </div>
             <div class="ui-md-6 ui-fluid">
                 <label>Qual?</label>
-                <input type="text" pInputText>
+                <input type="text" pInputText name="medicacaoEspecificaDescricao" [(ngModel)]="aluno.medicacaoEspecificaDescricao" >
             </div>
         </div>
 
         <div class="ui-g-12 ui-md-6 ui-fluid">
             <label>Nome do médico</label>
-            <input type="text" pInputText>
+            <input type="text" pInputText name="nomeMedico" [(ngModel)]="aluno.nomeMedico" >
         </div>
 
-        <div class="ui-g-12 ui-md-6 ui-fluid">
-            <label>Telefone</label>
-            <p-inputMask mask="(99)9999-9999"></p-inputMask>
-        </div>
 
         <div class="ui-g-12 ui-fluid">
             <hr>
             <label>É portador de alguma necessidade especial?</label>
+
         </div>
 
-        <div class="ui-g-12 ui-fluid">
-            <label>Motora</label>
-            <p-radioButton name="group13" value="Option 1" label="Não" [(ngModel)]="val13" inputId="opt1"></p-radioButton>
-            <p-radioButton name="group13" value="Option 2" label="Sim" [(ngModel)]="val13" inputId="opt2"></p-radioButton>
-        </div>
 
-        <div class="ui-g-12 ui-fluid">
-            <label>Visual</label>
-            <p-radioButton name="group14" value="Option 1" label="Não" [(ngModel)]="val14" inputId="opt1"></p-radioButton>
-            <p-radioButton name="group14" value="Option 2" label="Sim" [(ngModel)]="val14" inputId="opt2"></p-radioButton>
-        </div>
-
-        <div class="ui-g-12 ui-fluid">
-            <label>Auditiva</label>
-            <p-radioButton name="group15" value="Option 1" label="Não" [(ngModel)]="val15" inputId="opt1"></p-radioButton>
-            <p-radioButton name="group15" value="Option 2" label="Sim" [(ngModel)]="val15" inputId="opt2"></p-radioButton>
-        </div>
-
-        <div class="ui-g-12 ui-fluid">
-            <label>Autismo</label>
-            <p-radioButton name="group16" value="Option 1" label="Não" [(ngModel)]="val16" inputId="opt1"></p-radioButton>
-            <p-radioButton name="group16" value="Option 2" label="Sim" [(ngModel)]="val16" inputId="opt2"></p-radioButton>
-        </div>
 
         <div class="ui-g-12 ui-fluid">
           <label>Outra</label>
