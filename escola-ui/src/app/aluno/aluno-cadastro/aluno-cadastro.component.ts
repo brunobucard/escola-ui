@@ -54,6 +54,8 @@ export class AlunoCadastroComponent implements OnInit {
     { label: 'Não', value: 0 },
   ];
 
+  necessidadeEspecial: string[] = [];
+
 
 
   responsaveis = [];

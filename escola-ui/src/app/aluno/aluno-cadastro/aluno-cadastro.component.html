@@ -495,10 +495,6 @@
           <p-selectButton name="doencaCongenita" [options]="booleano"
            [(ngModel)]="aluno.doencaCongenita"></p-selectButton>
         </div>
-        <div class="ui-md-6 ui-fluid">
-          <label>Qual?</label>
-          <input type="text" pInputText  >
-        </div>
 
       </div>
 
@@ -601,7 +597,7 @@
         <div class="ui-g-12 ui-fluid">
             <hr>
             <label>É portador de alguma necessidade especial?</label>
-
+            <div class="ui-g-12"><p-checkbox name="group2" value="MOTORA" label="motora"  inputId="motora" [(ngModel)]="aluno.necessidadeEspecial" ></p-checkbox></div>
         </div>
 
 
