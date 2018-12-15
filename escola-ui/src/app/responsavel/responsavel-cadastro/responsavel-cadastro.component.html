@@ -1,9 +1,9 @@
 <div class="container">
-  <form autocomplete="off">
+  <form #f="ngForm" autocomplete="off" (ngSubmit)="salvar(f)">
     <div class="ui-g">
 
       <div class="ui-g-12">
-          <h1>Cadastro responsável</h1>
+        <h1>{{ editando ? 'Edição de' : 'Novo' }} responsável</h1>
       </div>
 
       <div class="ui-g-12 ui-md-8 ui-fluid">
@@ -11,7 +11,35 @@
           <input type="text" name="nome" pInputText [(ngModel)]="responsavel.nome" >
         </div>
 
+        <!--
+        <div class="ui-g-12 ui-md-1 ui-fluid">
+          <label>Sexo</label>
+          <p-dropdown name="sexo" placeholder="Selecione" [options]="sexos" [(ngModel)]="responsavel.sexo" [autoWidth]="false" #sexo="ngModel"></p-dropdown>
 
+          <app-message [control]="sexo" error="required"
+            text="Informe o sexo"></app-message>
+
+        </div>
+
+
+        <div class="ui-g-12 ui-md-2 ui-fluid">
+          <label>Cor/Raça</label>
+          <p-dropdown name="cor" placeholder="Selecione" [options]="cores" [(ngModel)]="" [autoWidth]="false" #cor="ngModel"></p-dropdown>
+
+          <app-message [control]="cor" error="required"
+            text="Informe uma opção"></app-message>
+
+      </div>
+
+      <div class="ui-g-12 ui-md-8 ui-fluid">
+          <label>Estado civil</label>
+          <p-dropdown name="estadoCivil" placeholder="Selecione" [options]="estadosCivis" [(ngModel)]="" [autoWidth]="false" #estadoCivil="ngModel"></p-dropdown>
+
+          <app-message [control]="estadoCivil" error="required"
+          text="Informe uma opção"></app-message>
+
+      </div>
+    -->
 
 
         <div class="ui-g-12 ui-md-2 ui-fluid">
@@ -131,6 +159,12 @@
           <p-inputMask mask="(99)9999-9999"></p-inputMask>
         </div>
 
+        <div class="ui-g-12">
+          <button pButton type="submit" label="Salvar" [disabled]="f.invalid"></button>
+          <button pButton type="button" label="Nova" class="ui-button-info"
+            (click)="nova(f)"></button>
+          <button pButton type="button" label="Cancelar" routerLink="/responsaveis"></button>
+        </div>
 
     </div>
   </form>

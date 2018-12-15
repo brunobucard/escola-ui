@@ -4,6 +4,10 @@ import { Component, OnInit } from '@angular/core';
 import { LogoutService } from './../../seguranca/logout.service';
 import { ErrorHandlerService } from './../error-handler.service';
 import { AuthService } from './../../seguranca/auth.service';
+import { MenuItem } from 'primeng/api';
+
+
+
 
 @Component({
   selector: 'app-navbar',
@@ -11,6 +15,8 @@ import { AuthService } from './../../seguranca/auth.service';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
+
+  items: MenuItem[];
 
   exibindoMenu = false;
 
@@ -22,6 +28,51 @@ export class NavbarComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+
+    this.items = [
+      {
+          label: 'Coordenação',
+          items: [
+              {label: 'Sala de aula'},
+              {label: 'Funcionários'},
+              {label: 'Disciplinas'},
+              {label: 'Grades curriculares'},
+              {label: 'Período letivos'},
+              {label: 'Valores'},
+          ]
+      },
+      {
+          label: 'Secretaria',
+          items: [
+              {label: 'Responsável', routerLink: '/responsaveis'},
+              {label: 'Aluno', routerLink: '/alunos'},
+              {label: 'Turmas'},
+              {label: 'Matrículas'},
+              {label: 'Ocorrências'},
+              {label: 'Agenda de eventos'},
+              {label: 'Relatórios'},
+            ]
+      },
+      {
+          label: 'Diário escolar',
+          items: [
+              {label: 'Notas'},
+              {label: 'Conteúdos ministrados'},
+              {label: 'Faltas'},
+              {label: 'Relatórios'},
+            ]
+      },
+      {
+        label: 'Financeiro',
+        items: [
+            {label: 'Centros de custo'},
+            {label: 'Fornecedores'},
+            {label: 'Movimentações'},
+            {label: 'Estoque'},
+            {label: 'Relatórios'},
+          ]
+    },
+    ];
   }
 
   logout() {

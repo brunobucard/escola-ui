@@ -138,7 +138,7 @@ export class AlunoCadastroComponent implements OnInit {
   }
 
   atualizarTituloEdicao() {
-    this.title.setTitle('Edição de aluno: ${this.aluno.nome}');
+    this.title.setTitle(`Edição de aluno ${this.aluno.nome}`);
   }
 
   carregarResponsaveis() {

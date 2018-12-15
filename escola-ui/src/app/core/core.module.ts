@@ -5,10 +5,12 @@ import { NgModule, LOCALE_ID } from '@angular/core';
 import { CommonModule, registerLocaleData } from '@angular/common';
 import localePt from '@angular/common/locales/pt';
 
-import { ConfirmationService } from 'primeng/api';
+import { ConfirmationService, MenuItem } from 'primeng/api';
 import { MessageService } from 'primeng/components/common/messageservice';
 import { ConfirmDialogModule } from 'primeng/confirmdialog';
 import { GrowlModule } from 'primeng/growl';
+import {MenubarModule} from 'primeng/menubar';
+
 import { JwtHelperService } from '@auth0/angular-jwt';
 
 import { AuthService } from './../seguranca/auth.service';
@@ -26,6 +28,8 @@ registerLocaleData(localePt);
     CommonModule,
     HttpClientModule,
     RouterModule,
+    MenubarModule,
+
 
     GrowlModule,
     ConfirmDialogModule,
@@ -38,14 +42,15 @@ registerLocaleData(localePt);
   exports: [
     NavbarComponent,
     GrowlModule,
-    ConfirmDialogModule
+    ConfirmDialogModule,
+
+    MenubarModule
   ],
   providers: [
     AlunoService,
     ErrorHandlerService,
     AuthService,
     MoneyHttp,
-
     ConfirmationService,
     MessageService,
     JwtHelperService,

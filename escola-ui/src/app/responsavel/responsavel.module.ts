@@ -18,6 +18,7 @@ import { CommonModule } from '@angular/common';
 import { ResponsavelCadastroComponent } from './responsavel-cadastro/responsavel-cadastro.component';
 import { FormsModule } from '@angular/forms';
 import { SharedModule } from 'primeng/components/common/shared';
+import { ResponsavelPesquisaComponent } from './responsavel-pesquisa/responsavel-pesquisa.component';
 
 @NgModule({
   imports: [
@@ -43,6 +44,9 @@ import { SharedModule } from 'primeng/components/common/shared';
     ResponsaveisRoutingModule
 
   ],
-  declarations: [ResponsavelCadastroComponent]
+  declarations: [
+    ResponsavelCadastroComponent,
+    ResponsavelPesquisaComponent
+  ]
 })
 export class ResponsavelModule { }
