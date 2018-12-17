@@ -93,6 +93,7 @@ export class Responsavel {
   cpf: string;
   identidade: string;
   identidadeEmissao: Date;
+  identidadeEmissor: string;
   religiao: string;
   escolaridade: string;
   profissao: string;
