@@ -6,15 +6,15 @@
         <h1>{{ editando ? 'Edição de' : 'Novo' }} responsável</h1>
       </div>
 
-      <div class="ui-g-12 ui-md-8 ui-fluid">
+      <div class="ui-g-12 ui-md-7 ui-fluid">
           <label>Nome Completo</label>
-          <input type="text" name="nome" pInputText [(ngModel)]="responsavel.nome" >
+          <input type="text" name="nome" pInputText [(ngModel)]="responsavel.nome" required >
         </div>
 
 
-        <div class="ui-g-12 ui-md-1 ui-fluid">
+        <div class="ui-g-12 ui-md-2 ui-fluid">
           <label>Sexo</label>
-          <p-dropdown name="sexo" placeholder="Selecione" [options]="sexos" [(ngModel)]="responsavel.sexo" [autoWidth]="false"></p-dropdown>
+          <p-dropdown name="sexo" placeholder="Selecione" [options]="sexos" [(ngModel)]="responsavel.sexo" [autoWidth]="false" required></p-dropdown>
 
 
         </div>
@@ -22,14 +22,14 @@
 
         <div class="ui-g-12 ui-md-2 ui-fluid">
           <label>Cor/Raça</label>
-          <p-dropdown name="cor" placeholder="Selecione" [options]="cores" [(ngModel)]="responsavel.cor" [autoWidth]="false" #cor="ngModel"></p-dropdown>
+          <p-dropdown name="cor" placeholder="Selecione" [options]="cores" [(ngModel)]="responsavel.cor" [autoWidth]="false" #cor="ngModel" required></p-dropdown>
 
 
 
       </div>
 
 
-      <div class="ui-g-12 ui-md-8 ui-fluid">
+      <div class="ui-g-12 ui-md-2 ui-fluid">
           <label>Estado civil</label>
           <p-dropdown name="estadoCivil" placeholder="Selecione" [options]="estadosCivis" [(ngModel)]="responsavel.estadoCivil" [autoWidth]="false"></p-dropdown>
 

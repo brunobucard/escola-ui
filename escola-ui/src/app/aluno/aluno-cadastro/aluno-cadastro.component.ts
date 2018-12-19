@@ -56,6 +56,8 @@ export class AlunoCadastroComponent implements OnInit {
 
   necessidadeEspecial: string[] = [];
 
+  transporte: string[] = [];
+
 
 
   responsaveis = [];

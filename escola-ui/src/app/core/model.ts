@@ -61,6 +61,17 @@ export class Aluno {
   hospital: string;
   hospitalEndereco: string;
   hospitalTelefone: string;
+  medicoTelefone: string;
+  autorizadoNome1: string;
+  autorizadoIdentidade1: string;
+  autoridadeTelefone1: string;
+  autorizadoNome2: string;
+  autoridadeTelefone2: string;
+  autorizadoIdentidade2: string;
+  transporte: string;
+  necessidadeEspecialOutra: string;
+  especialistaAcompanhamento: boolean;
+  especialistaDescricao: string;
   endereco = new Endereco();
   responsavel = new Responsavel();
 }
@@ -94,6 +105,7 @@ export class Responsavel {
   identidade: string;
   identidadeEmissao: Date;
   identidadeEmissor: string;
+  identidadeEstado: string;
   religiao: string;
   escolaridade: string;
   profissao: string;
@@ -105,6 +117,19 @@ export class Responsavel {
   estadoCivil: string;
   sexo: string;
   endereco = new Endereco();
+}
+
+export class Turma {
+  codigo: number;
+  turma: string;
+  vaga: number;
+  periodo: string;
+  serie = new Serie();
+}
+
+export class Serie {
+  codigo: number;
+  descricao: string;
 }
 
 export class Contato {

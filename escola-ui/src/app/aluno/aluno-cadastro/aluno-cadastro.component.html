@@ -348,6 +348,11 @@
             <input type="text" pInputText name="nomeMedico" [(ngModel)]="aluno.nomeMedico" >
         </div>
 
+        <div class="ui-g-12 ui-md-6 ui-fluid">
+          <label>Telefone do médico</label>
+          <input type="text" pInputText name="medicoTelefone" [(ngModel)]="aluno.medicoTelefone" >
+      </div>
+
         <!--
         <div class="ui-g-12 ui-fluid">
             <hr>
@@ -359,20 +364,22 @@
           <label>Outra</label>
           <input type="text" pInputText>
         </div>
-        -->
+
 
         <div class="ui-g-12 ui-fluid" style="margin-top: 10px">
             <hr>
         </div>
+      -->
 
-        <!--
         <div class="ui-g-12 ui-fluid" style="margin-bottom:10px">
             <label>Faz algum acompanhamento com especialista</label>
-            <p-radioButton name="group17" value="Option 1" label="Não" [(ngModel)]="val17" inputId="opt1"></p-radioButton>
-            <p-radioButton name="group17" value="Option 2" label="Sim" [(ngModel)]="val17" inputId="opt2"></p-radioButton>
+            <div class="ui-md-2">
+              <p-selectButton name="especialistaAcompanhamento" [options]="booleano"
+              [(ngModel)]="aluno.especialistaAcompanhamento"></p-selectButton>
+          </div>
             <div class="ui-md-6 ui-fluid">
                 <label>Qual?</label>
-                <input type="text" pInputText>
+                <input type="text" pInputText name="especialistaDescricao" [(ngModel)]="aluno.especialistaDescricao">
             </div>
         </div>
 
@@ -381,7 +388,7 @@
             <hr>
         </div>
 
-
+<!--
         <div class="ui-g-12 ui-fluid" style="margin-bottom:10px">
             <label>Quais doenças contagiosas da infância já contraidas?</label>
             <div class="ui-g-12"><p-checkbox name="group1" value="CAXUMBA" label="caxumba"  inputId="caxumba"></p-checkbox></div>
@@ -471,36 +478,38 @@
         </div>
         <div class="ui-g-12 ui-md-6 ui-fluid">
           <label>Nome</label>
-          <input type="text" pInputText>
+          <input type="text" pInputText name="autorizadoNome1" [(ngModel)]="aluno.autorizadoNome1">
         </div>
         <div class="ui-g-12 ui-md-2 ui-fluid">
-          <label>RG</label>
-          <input type="text" pInputText>
+          <label>Identidade</label>
+          <input type="text" pInputText name="autorizadoIdentidade1" [(ngModel)]="aluno.autorizadoIdentidade1">
         </div>
         <div class="ui-g-12 ui-md-4 ui-fluid">
             <label>Parentesco</label>
-            <input type="text" pInputText>
+            <input type="text" pInputText name="autorizadoTelefone1" [(ngModel)]="aluno.autorizadoTelefone1">
         </div>
         <div class="ui-g-12 ui-md-6 ui-fluid">
             <label>Nome</label>
-            <input type="text" pInputText>
+            <input type="text" pInputText name="autorizadoNome2" [(ngModel)]="aluno.autorizadoNome2">
           </div>
           <div class="ui-g-12 ui-md-2 ui-fluid">
-            <label>RG</label>
-            <input type="text" pInputText>
+            <label>Identidade</label>
+            <input type="text" pInputText name="autorizadoIdentidade2" [(ngModel)]="aluno.autorizadoIdentidade2">
           </div>
           <div class="ui-g-12 ui-md-4 ui-fluid">
               <label>Parentesco</label>
-              <input type="text" pInputText>
+              <input type="text" pInputText name="autorizadoTelefone2" [(ngModel)]="aluno.autorizadoTelefone2">
           </div>
+
 
           <div class="ui-g-12 ui-fluid" style="margin-bottom:10px">
               <label>O educando vem para escola de que forma?</label>
-              <div class="ui-g-12"><p-checkbox name="group2" value="APE" label="A pé e sozinho"  inputId="ape"></p-checkbox></div>
-              <div class="ui-g-12"><p-checkbox name="group2" value="ONIBUS" label="De ônibus e sozinho"  inputId="onibus"></p-checkbox></div>
-              <div class="ui-g-12"><p-checkbox name="group2" value="ACOMPANHADO" label="Alguém vem traze-lo"  inputId="acompanhado"></p-checkbox></div>
-              <div class="ui-g-12"><p-checkbox name="group2" value="TRANSPORTE" label="Transporte escolar"  inputId="transporte"></p-checkbox></div>
+              <div class="ui-g-12"><p-checkbox name="group2" value="APE" label="A pé e sozinho"  inputId="ape" [(ngModel)]="aluno.transporte"></p-checkbox></div>
+              <div class="ui-g-12"><p-checkbox name="group2" value="ONIBUS" label="De ônibus e sozinho"  inputId="onibus" [(ngModel)]="aluno.transporte"></p-checkbox></div>
+              <div class="ui-g-12"><p-checkbox name="group2" value="ACOMPANHADO" label="Alguém vem traze-lo"  inputId="acompanhado" [(ngModel)]="aluno.transporte"></p-checkbox></div>
+              <div class="ui-g-12"><p-checkbox name="group2" value="TRANSPORTE" label="Transporte escolar"  inputId="transporte" [(ngModel)]="aluno.transporte"></p-checkbox></div>
           </div>
+
 
 
       <div class="ui-g-12 ui-fluid">
