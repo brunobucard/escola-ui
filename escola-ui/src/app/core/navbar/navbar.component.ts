@@ -46,7 +46,7 @@ export class NavbarComponent implements OnInit {
           items: [
               {label: 'Responsável', routerLink: '/responsaveis'},
               {label: 'Aluno', routerLink: '/alunos'},
-              {label: 'Turmas'},
+              {label: 'Turmas', routerLink: '/turmas'},
               {label: 'Matrículas'},
               {label: 'Ocorrências'},
               {label: 'Agenda de eventos'},

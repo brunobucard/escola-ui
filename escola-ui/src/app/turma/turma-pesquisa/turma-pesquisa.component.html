@@ -1,0 +1,71 @@
+<div class="container">
+  <div class="ui-g">
+
+    <form autocomplete="off" (ngSubmit)="pesquisar()">
+
+      <div class="ui-g-12">
+        <h1>Turma</h1>
+      </div>
+
+      <div class="ui-g-12 ui-fluid">
+        <label>Turma</label>
+        <input pInputText type="text" name="turma" [(ngModel)]="filtro.turma">
+      </div>
+
+      <div class="ui-g-12">
+        <button pButton type="submit" label="Pesquisar"></button>
+      </div>
+
+    </form>
+
+  </div>
+
+  <div class="ui-g">
+
+      <p-table [value]="turmas" [paginator]="true" [rows]="5"
+      [responsive]="true" [rows]="filtro.itensPorPagina"
+      [lazy]="true" [totalRecords]="totalRegistros"
+      (onLazyLoad)="aoMudarPagina($event)" #tabela>
+      <ng-template pTemplate="header">
+          <tr>
+              <th>Turma</th>
+              <th>Série</th>
+              <th>Vaga</th>
+              <th class="col-acoes-header">Ações</th>
+          </tr>
+      </ng-template>
+
+      <ng-template pTemplate="body" let-turma>
+          <tr>
+              <td>{{ turma.turma }}</td>
+              <td>{{ turma.serie.descricao }}</td>
+              <td>{{ turma.vaga }}</td>
+              <td class="col-acoes">
+                <a pButton icon="fa fa-pencil" pTooltip="Editar" tooltipPosition="top"
+                  [routerLink]="['/turmas', turma.codigo]"></a>
+
+                <button pButton icon="fa fa-trash" pTooltip="Excluir" tooltipPosition="top"
+                  (click)="confirmarExclusao(turma)"></button>
+              </td>
+          </tr>
+      </ng-template>
+
+      <ng-template pTemplate="emptymessage">
+          <tr>
+            <td colspan="5">
+              Nenhum registro encontrado
+            </td>
+          </tr>
+        </ng-template>
+
+    </p-table>
+
+
+
+    <div class="ui-g-12">
+      <a pButton label="Nova turma" routerLink="/turmas/novo"></a>
+    </div>
+
+  </div>
+
+</div>

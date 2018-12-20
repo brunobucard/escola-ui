@@ -8,6 +8,7 @@ const routes: Routes = [
 
   { path: 'alunos', loadChildren: './aluno/aluno.module#AlunoModule'},
   { path: 'responsaveis', loadChildren: './responsavel/responsavel.module#ResponsavelModule'},
+  { path: 'turmas', loadChildren: './turma/turma.module#TurmaModule'},
 
   { path: '', redirectTo: 'alunos', pathMatch: 'full' },
   { path: 'nao-autorizado', component: NaoAutorizadoComponent },
