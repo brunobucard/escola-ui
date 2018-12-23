@@ -20,6 +20,12 @@ const routes: Routes = [
     canActivate: [AuthGuard],
     data: { roles: ['ROLE_CADASTRAR_TURMA'] }
   },
+  {
+    path: ':codigo',
+    component: TurmaCadastroComponent,
+    canActivate: [AuthGuard],
+    data: { roles: ['ROLE_CADASTRAR_TURMA'] }
+  },
 
 
 ];

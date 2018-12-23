@@ -1,3 +1,43 @@
-<p>
-  turma-cadastro works!
-</p>
+<div class="container">
+  <form #f="ngForm" autocomplete="off" (ngSubmit)="salvar(f)">
+    <div class="ui-g">
+
+      <div class="ui-g-12">
+        <h1>{{ editando ? 'Edição de' : 'Nova' }} turma</h1>
+      </div>
+
+      <div class="ui-g-12 ui-md-7 ui-fluid">
+        <label>Turma</label>
+        <input type="text" name="turma" pInputText [(ngModel)]="turma.turma" required >
+      </div>
+
+      <!--
+      <div class="ui-g-12 ui-md-7 ui-fluid">
+        <label>Série</label>
+        <p-dropdown name="serie" placeholder="Selecione" [options]="series" [(ngModel)]="turma.serie.codigo" [autoWidth]="false" required #serie="ngModel"></p-dropdown>
+        <app-message [control]="serie" error="required"
+              text="Informe a série"></app-message>
+      </div>
+      -->
+
+      <div class="ui-g-12 ui-md-7 ui-fluid">
+        <label>Vaga</label>
+        <input type="text" name="vaga" pInputText [(ngModel)]="turma.vaga" required >
+      </div>
+
+      <div class="ui-g-12 ui-md-7 ui-fluid">
+        <label>Período</label>
+        <p-dropdown name="periodo" placeholder="Selecione" [options]="periodos" [(ngModel)]="turma.periodo" [autoWidth]="false" required></p-dropdown>
+      </div>
+
+      <div class="ui-g-12">
+        <button pButton type="submit" label="Salvar" [disabled]="f.invalid"></button>
+        <button pButton type="button" label="Nova" class="ui-button-info"
+          (click)="nova(f)"></button>
+        <button pButton type="button" label="Cancelar" routerLink="/turmas"></button>
+      </div>
+
+
+    </div>
+  </form>
+</div>
