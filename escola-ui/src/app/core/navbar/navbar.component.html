@@ -6,7 +6,12 @@
         <a href="javascript:;" class="navbar-toggle" (click)="exibindoMenu = !exibindoMenu"><i class="fa fa-bars"></i></a>
         <p-menubar [model]="items">
           <div>
-            <div>{{ auth.jwtPayload?.nome }}</div>
+            <div>
+              {{ auth.jwtPayload?.nome }}
+              <a href="javascript:;" (click)="logout()"></a>
+              <i class="pi pi-sign-out"></i>
+            </div>
+
           </div>
         </p-menubar>
       </div>
