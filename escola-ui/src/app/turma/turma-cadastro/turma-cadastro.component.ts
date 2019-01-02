@@ -111,10 +111,9 @@ export class TurmaCadastroComponent implements OnInit {
   }
 
   carregarSeries() {
-    this.serieService.listarTodos()
+    this.turmaService.listarSeries()
       .then(series => {
-        this.series = series
-        .map(s => ({ label: s.descricao, value: s.codigo }));
+        this.series = series.map(s => ({ label: s.descricao, value: s.codigo }));
       })
       .catch(erro => this.errorHandler.handle(erro));
   }

@@ -9,7 +9,7 @@ import { environment } from '../../environments/environment';
 
 import 'rxjs/add/operator/toPromise';
 import { config } from 'rxjs';
-import { Turma } from '../core/model';
+import { Turma, Serie } from '../core/model';
 
 export class TurmaFiltro {
   turma: string;
@@ -23,11 +23,11 @@ export class TurmaFiltro {
 export class TurmaService {
 
   turmasUrl: string;
+  seriesUrl: string;
 
-  constructor(
-    private http: MoneyHttp
-  ) {
+  constructor(private http: MoneyHttp) {
     this.turmasUrl = `${environment.apiUrl}/turmas`;
+    this.seriesUrl = `${environment.apiUrl}/series`;
    }
 
    pesquisar(filtro: TurmaFiltro): Promise<any> {
@@ -86,6 +86,12 @@ export class TurmaService {
 
         return turma;
       });
+  }
+
+  listarSeries(): Promise<any> {
+    return this.http.get<any>(this.seriesUrl)
+    .toPromise()
+      .then(response => response.content);
   }
 
 }
