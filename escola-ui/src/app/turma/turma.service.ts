@@ -88,10 +88,9 @@ export class TurmaService {
       });
   }
 
-  listarSeries(): Promise<any> {
-    return this.http.get<any>(this.seriesUrl)
-    .toPromise()
-      .then(response => response.content);
+  listarSeries(): Promise<Serie[]> {
+    return this.http.get<Serie[]>(this.seriesUrl)
+    .toPromise();
   }
 
 }
