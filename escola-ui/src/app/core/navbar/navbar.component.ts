@@ -31,6 +31,12 @@ export class NavbarComponent implements OnInit {
 
     this.items = [
       {
+        label: 'Administração',
+        items: [
+            {label: 'Usuários'},
+        ]
+    },
+      {
           label: 'Coordenação',
           items: [
               {label: 'Sala de aula'},
