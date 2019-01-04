@@ -125,11 +125,20 @@ export class Turma {
   vaga: number;
   periodo: string;
   serie = new Serie();
+  sala = new Sala();
 }
 
 export class Serie {
   codigo: number;
   descricao: string;
+}
+
+export class Sala {
+  codigo: number;
+  sala: string;
+  limitePessoa: number;
+  tamanho: number;
+  observacao: string;
 }
 
 export class Contato {

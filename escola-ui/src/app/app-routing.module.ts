@@ -10,6 +10,7 @@ const routes: Routes = [
   { path: 'responsaveis', loadChildren: './responsavel/responsavel.module#ResponsavelModule'},
   { path: 'turmas', loadChildren: './turma/turma.module#TurmaModule'},
   { path: 'home', loadChildren: './home/home.module#HomeModule'},
+  { path: 'salas', loadChildren: './sala/sala.module#SalaModule'},
 
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'nao-autorizado', component: NaoAutorizadoComponent },

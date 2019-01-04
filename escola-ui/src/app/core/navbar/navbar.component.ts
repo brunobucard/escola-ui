@@ -39,7 +39,7 @@ export class NavbarComponent implements OnInit {
       {
           label: 'Coordenação',
           items: [
-              {label: 'Sala de aula'},
+              {label: 'Sala de aula', routerLink: '/salas'},
               {label: 'Funcionários'},
               {label: 'Disciplinas'},
               {label: 'Grades curriculares'},
