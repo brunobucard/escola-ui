@@ -20,6 +20,7 @@ import { FormsModule } from '@angular/forms';
 
 import { SalasRoutingModule } from './sala-routing.module';
 import { SalaPesquisaComponent } from './sala-pesquisa/sala-pesquisa.component';
+import { SalaCadastroComponent } from './sala-cadastro/sala-cadastro.component';
 
 
 @NgModule({
@@ -45,6 +46,6 @@ import { SalaPesquisaComponent } from './sala-pesquisa/sala-pesquisa.component';
     SharedModule,
     SalasRoutingModule
   ],
-  declarations: [SalaPesquisaComponent]
+  declarations: [SalaPesquisaComponent, SalaCadastroComponent]
 })
 export class SalaModule { }

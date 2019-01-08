@@ -1,8 +1,9 @@
-import { ConfirmationService, MessageService, LazyLoadEvent } from 'primeng/api';
+import { ConfirmationService, LazyLoadEvent } from 'primeng/api';
 import { SalaFiltro, SalaService } from './../sala.service';
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { ErrorHandlerService } from 'src/app/core/error-handler.service';
 import { Title } from '@angular/platform-browser';
+import { MessageService } from 'primeng/components/common/messageservice';
 
 @Component({
   selector: 'app-sala-pesquisa',
@@ -62,7 +63,7 @@ export class SalaPesquisaComponent implements OnInit {
           this.grid.first = 0;
         }
 
-        this.messageService.add({ severity: 'success', detail: 'Turma excluída com sucesso!'});
+        this.messageService.add({ severity: 'success', detail: 'Sala excluída com sucesso!'});
       })
       .catch(erro => this.errorHandler.handle(erro));
   }

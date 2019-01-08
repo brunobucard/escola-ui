@@ -1,0 +1,39 @@
+<div class="container">
+  <form #f="ngForm" autocomplete="off" (ngSubmit)="salvar(f)">
+    <div class="ui-g">
+
+      <div class="ui-g-12">
+        <h1>{{ editando ? 'Edição de' : 'Nova' }} sala</h1>
+      </div>
+
+      <div class="ui-g-12 ui-md-7 ui-fluid">
+        <label>Sala</label>
+        <input type="text" name="sala" pInputText [(ngModel)]="sala.sala" required >
+      </div>
+
+      <div class="ui-g-12 ui-md-7 ui-fluid">
+        <label>Limite de pessoa</label>
+        <input type="text" name="limite" pInputText [(ngModel)]="sala.limitePessoa" required  pKeyFilter="int">
+      </div>
+
+      <div class="ui-g-12 ui-md-7 ui-fluid">
+        <label>Tamanho (m²)</label>
+        <input type="text" name="tamanho" pInputText [(ngModel)]="sala.tamanho" pKeyFilter="num" placeholder="00.00" >
+      </div>
+
+      <div class="ui-g-12 ui-md-7 ui-fluid">
+        <label>Observação</label>
+        <textarea pInputTextarea name="observacao" [(ngModel)]="sala.observacao" ></textarea>
+      </div>
+
+      <div class="ui-g-12">
+        <button pButton type="submit" label="Salvar" [disabled]="f.invalid"></button>
+        <button pButton type="button" label="Nova" class="ui-button-info"
+          (click)="nova(f)"></button>
+        <button pButton type="button" label="Cancelar" routerLink="/salas"></button>
+      </div>
+
+
+    </div>
+  </form>
+</div>

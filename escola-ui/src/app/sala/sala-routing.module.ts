@@ -1,3 +1,4 @@
+import { SalaCadastroComponent } from './sala-cadastro/sala-cadastro.component';
 
 
 import { Routes, RouterModule } from '@angular/router';
@@ -14,6 +15,18 @@ const routes: Routes = [
     component: SalaPesquisaComponent,
     canActivate: [AuthGuard],
     data: { roles: ['ROLE_PESQUISAR_SALA'] }
+  },
+  {
+    path: 'nova',
+    component: SalaCadastroComponent,
+    canActivate: [AuthGuard],
+    data: { roles: ['ROLE_CADASTRAR_SALA'] }
+  },
+  {
+    path: ':codigo',
+    component: SalaCadastroComponent,
+    canActivate: [AuthGuard],
+    data: { roles: ['ROLE_CADASTRAR_SALA'] }
   },
 
 ];
