@@ -45,7 +45,7 @@ export class SalaPesquisaComponent implements OnInit {
     this.pesquisar(pagina);
   }
 
-  confirmarExlusao(sala: any) {
+  confirmarExclusao(sala: any) {
     this.confirmation.confirm({
       message: 'Tem certeza que deseja excluir?',
       accept: () => {
