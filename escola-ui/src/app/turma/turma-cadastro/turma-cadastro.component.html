@@ -19,6 +19,12 @@
               text="Informe a série"></app-message>
       </div>
 
+      <div class="ui-g-12 ui-md-7 ui-fluid">
+        <label>Sala</label>
+        <p-dropdown name="sala" placeholder="Selecione" [options]="salas" [(ngModel)]="turma.sala.codigo" [autoWidth]="false" #sala="ngModel"></p-dropdown>
+
+      </div>
+
 
       <div class="ui-g-12 ui-md-7 ui-fluid">
         <label>Vaga</label>

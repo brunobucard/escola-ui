@@ -5,9 +5,10 @@ import { MessageService } from 'primeng/components/common/messageservice';
 import { ConfirmationService } from 'primeng/api';
 import { ErrorHandlerService } from './../../core/error-handler.service';
 import { Component, OnInit } from '@angular/core';
-import { Turma } from 'src/app/core/model';
+import { Turma, Sala } from 'src/app/core/model';
 import { TurmaService } from '../turma.service';
 import { SerieService } from '../../serie/serie.service';
+import { SalaService } from '../../sala/sala.service';
 
 @Component({
   selector: 'app-turma-cadastro',
@@ -24,12 +25,15 @@ export class TurmaCadastroComponent implements OnInit {
   ];
 
   series = [];
+  salas = [];
 
   turma = new Turma();
+
 
   constructor(
     private turmaService: TurmaService,
     private serieService: SerieService,
+    private salaService: SalaService,
     private errorHandler: ErrorHandlerService,
     private confirmation: ConfirmationService,
     private messageService: MessageService,
@@ -50,6 +54,7 @@ export class TurmaCadastroComponent implements OnInit {
 
     this.carregarSeries();
 
+    this.carregarSala();
 
 
   }
@@ -114,6 +119,14 @@ export class TurmaCadastroComponent implements OnInit {
     this.turmaService.listarSeries()
       .then(series => {
         this.series = series.map(s => ({ label: s.descricao, value: s.codigo }));
+      })
+      .catch(erro => this.errorHandler.handle(erro));
+  }
+
+  carregarSala() {
+    this.salaService.listarSalas()
+      .then(salas => {
+        this.salas = salas.map(sala => ({ label: sala.sala, value: sala.codigo}));
       })
       .catch(erro => this.errorHandler.handle(erro));
   }
