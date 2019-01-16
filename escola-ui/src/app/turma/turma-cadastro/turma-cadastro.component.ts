@@ -54,7 +54,7 @@ export class TurmaCadastroComponent implements OnInit {
 
     this.carregarSeries();
 
-    this.carregarSala();
+    this.carregarSalas();
 
 
   }
@@ -123,8 +123,8 @@ export class TurmaCadastroComponent implements OnInit {
       .catch(erro => this.errorHandler.handle(erro));
   }
 
-  carregarSala() {
-    this.salaService.listarSalas()
+  carregarSalas() {
+    this.salaService.listarTodas()
       .then(salas => {
         this.salas = salas.map(sala => ({ label: sala.sala, value: sala.codigo}));
       })

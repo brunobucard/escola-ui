@@ -87,9 +87,6 @@ export class SalaService {
       });
    }
 
-   listarSalas(): Promise<Sala[]> {
-     return this.http.get<Sala[]>(this.salasUrl)
-      .toPromise();
-   }
+
 
 }

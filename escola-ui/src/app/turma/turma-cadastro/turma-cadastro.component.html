@@ -8,7 +8,8 @@
 
       <div class="ui-g-12 ui-md-7 ui-fluid">
         <label>Turma</label>
-        <input type="text" name="turma" pInputText [(ngModel)]="turma.turma" required >
+        <input type="text" name="turma" pInputText [(ngModel)]="turma.turma" required>
+
       </div>
 
 
@@ -21,8 +22,9 @@
 
       <div class="ui-g-12 ui-md-7 ui-fluid">
         <label>Sala</label>
-        <p-dropdown name="sala" placeholder="Selecione" [options]="salas" [(ngModel)]="turma.sala.codigo" [autoWidth]="false" #sala="ngModel"></p-dropdown>
-
+        <p-dropdown name="sala" placeholder="Selecione" [options]="salas" [(ngModel)]="turma.sala.codigo" [autoWidth]="false" required #sala="ngModel"></p-dropdown>
+        <app-message [control]="sala" error="required"
+              text="Informe a sala"></app-message>
       </div>
 
 
