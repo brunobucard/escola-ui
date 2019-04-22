@@ -11,6 +11,7 @@ const routes: Routes = [
   { path: 'turmas', loadChildren: './turma/turma.module#TurmaModule'},
   { path: 'home', loadChildren: './home/home.module#HomeModule'},
   { path: 'salas', loadChildren: './sala/sala.module#SalaModule'},
+  { path: 'disciplinas', loadChildren: './disciplina/disciplina.module#DisciplinaModule'},
 
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'nao-autorizado', component: NaoAutorizadoComponent },
