@@ -18,6 +18,7 @@ import { CheckboxModule } from 'primeng/checkbox';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { SharedModule } from '../shared/shared.module';
 import { DisciplinaRoutingModule } from './disciplina-routing.module';
+import { DisciplinaCadastroComponent } from './disciplina-cadastro/disciplina-cadastro.component';
 
 @NgModule({
   imports: [
@@ -42,6 +43,9 @@ import { DisciplinaRoutingModule } from './disciplina-routing.module';
     SharedModule,
     DisciplinaRoutingModule
   ],
-  declarations: [DisciplinaPesquisaComponent]
+  declarations: [
+    DisciplinaPesquisaComponent,
+    DisciplinaCadastroComponent
+  ]
 })
 export class DisciplinaModule { }

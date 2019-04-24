@@ -1,0 +1,29 @@
+<div class="container">
+  <form #f="ngForm" autocomplete="off" (ngSubmit)="salvar(f)">
+    <div class="ui-g">
+
+      <div class="ui-g-12">
+        <h1>{{ editando ? 'Edição de' : 'Nova' }} Disciplina</h1>
+      </div>
+
+      <div class="ui-g-12 ui-md-7 ui-fluid">
+          <label>Disciplina</label>
+          <input type="text" name="disciplina" pInputText [(ngModel)]="disciplina.descricao" required >
+      </div>
+
+      <div class="ui-g-12 ui-md-2 ui-fluid">
+          <label>Abreviação</label>
+          <input type="text" name="abreviacao" pInputText [(ngModel)]="disciplina.abreviacao" required >
+      </div>
+
+
+      <div class="ui-g-12">
+        <button pButton type="submit" label="Salvar" [disabled]="f.invalid"></button>
+        <button pButton type="button" label="Nova" class="ui-button-info"
+          (click)="nova(f)"></button>
+        <button pButton type="button" label="Cancelar" routerLink="/disciplinas"></button>
+      </div>
+
+    </div>
+  </form>
+</div>
